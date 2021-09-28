@@ -1,0 +1,38 @@
+#img-bg{
+    min-height:  900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn-verdenutri{
+    background-color: #17A697;
+    color: #F3F3F3;
+    border-radius: 50px;
+}
+.bg-dividido{
+    background: linear-gradient(#03395B 9%,#F3F3F3 9%);
+}
+.title-modal{
+font-weight: bold;
+color: #F3F3F3;
+}
+label{
+    color: #012340;
+}
+input, select{
+    border-radius: 20px;
+    border-color: #0123406c;
+    background-color: #F3F3F3;
+}
+.modal-content{
+    background-color: #F3F3F3;
+border-radius:0px 0px 30px 30px;
+border-style: none;
+margin-top: 0px;
+
+}
+.close{
+    color: #F3F3F3;
+    border-radius: 30px;
+    outline: none;
+    font-size: 35px;
+}
