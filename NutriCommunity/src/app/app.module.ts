@@ -7,6 +7,9 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { FacaParteComponent } from './faca-parte/faca-parte.component';
+import { OdsComponent } from './ods/ods.component';
+import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { RodapeComponent } from './rodape/rodape.component';
     LoginComponent,
     CadastroComponent,
     MenuComponent,
-    RodapeComponent
+    RodapeComponent,
+    FacaParteComponent,
+    OdsComponent,
+    ComoFuncionaComponent
   ],
   imports: [
     BrowserModule,
