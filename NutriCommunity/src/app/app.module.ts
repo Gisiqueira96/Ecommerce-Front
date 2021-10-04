@@ -7,7 +7,13 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
+
 import { EquipeComponent } from './equipe/equipe.component';
+
+import { FacaParteComponent } from './faca-parte/faca-parte.component';
+import { OdsComponent } from './ods/ods.component';
+import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +22,13 @@ import { EquipeComponent } from './equipe/equipe.component';
     CadastroComponent,
     MenuComponent,
     RodapeComponent,
-    EquipeComponent
+
+    EquipeComponent,
+
+    FacaParteComponent,
+    OdsComponent,
+    ComoFuncionaComponent
+
   ],
   imports: [
     BrowserModule,
