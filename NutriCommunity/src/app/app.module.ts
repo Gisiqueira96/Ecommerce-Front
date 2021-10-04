@@ -13,6 +13,9 @@ import { EquipeComponent } from './equipe/equipe.component';
 import { FacaParteComponent } from './faca-parte/faca-parte.component';
 import { OdsComponent } from './ods/ods.component';
 import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
+import { HomeComponent } from './home/home.component';
+import { OngsComponent } from './ongs/ongs.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
 
     FacaParteComponent,
     OdsComponent,
-    ComoFuncionaComponent
+    ComoFuncionaComponent,
+    HomeComponent,
+    OngsComponent,
+    ProdutosComponent
 
   ],
   imports: [
