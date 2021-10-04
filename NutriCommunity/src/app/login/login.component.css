@@ -8,12 +8,13 @@
     color: #F3F3F3;
     border-radius: 50px;
 }
-.bg-dividido{
-    background: linear-gradient(#03395B 15%,#F3F3F3 15%);
+.btn-verdenutri:hover{
+    background: #012340;
 }
+
 .title-modal{
 font-weight: bold;
-color: #F3F3F3;
+color: #012340;
 }
 label{
     color: #012340;
@@ -31,7 +32,7 @@ margin-top: 0px;
 
 }
 .close{
-    color: #F3F3F3;
+    color: #012340;
     border-radius: 30px;
     outline: none;
     font-size: 35px;
@@ -41,4 +42,11 @@ margin-top: 0px;
     background-color: #F3F3F3;
     color: #17A697;
     border-radius: 50px;
+}
+.btn-outline-verdenutri:hover{
+    background-color: #17A697;
+    color: #F3F3F3;
+}
+.fade{
+    background-color: #012340a9;
 }

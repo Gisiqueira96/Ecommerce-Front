@@ -9,19 +9,23 @@
     border-radius: 50px;
 }
 .bg-dividido{
-    background: linear-gradient(#03395B 9%,#F3F3F3 9%);
+    background: #F3F3F3 9%;
 }
 .title-modal{
 font-weight: bold;
-color: #F3F3F3;
+color: #012340;
 }
 label{
     color: #012340;
 }
-input, select{
-    border-radius: 20px;
+input,input:focus, select, select:focus{
+    border-radius: 20px 20px 20px 20px;
     border-color: #0123406c;
     background-color: #F3F3F3;
+    
+}
+small{
+    color:#a61717;
 }
 .modal-content{
     background-color: #F3F3F3;
@@ -31,8 +35,19 @@ margin-top: 0px;
 
 }
 .close{
-    color: #F3F3F3;
+    color: #012340;
     border-radius: 30px;
     outline: none;
     font-size: 35px;
+}
+
+option{
+ border-radius: 30px;
+}
+
+.btn-verdenutri:hover{
+    background-color: #012340;
+}
+.fade{
+    background-color: #012340a9;
 }
