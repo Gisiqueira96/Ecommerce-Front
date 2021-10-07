@@ -21,6 +21,10 @@ export class OngsService {
     return this.http.get<Categoria[]>('https://nutricommunity.herokuapp.com/categoria', this.token)
   }
 
+    getByIdOng(id: number): Observable<Categoria> {
+      return this.http.get<Categoria>(`https://nutricommunity.herokuapp.com/categoria/${id}`, this.token)
+
+    }
   postOngs(ongs: Categoria): Observable<Categoria> {
     return this.http.post<Categoria>('https://nutricommunity.herokuapp.com/categoria', ongs, this.token)
   }

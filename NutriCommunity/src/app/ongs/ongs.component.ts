@@ -18,6 +18,7 @@ export class OngsComponent implements OnInit {
   tipoOng: string
   nome: string
   imagem: string
+  id:number
 
   constructor(
     private ongsService: OngsService
@@ -45,6 +46,16 @@ export class OngsComponent implements OnInit {
 
       alert ('ONG Adicionada com sucesso!')
     })
-  }
 
+  }
+  encaminharProduto(){
+    alert (this.id)
+    this.ongsService.getByIdOng(this.id).subscribe((resp: Categoria)=>{
+      this.ong = resp
+
+      
+    })
+  
+
+  }
 }
