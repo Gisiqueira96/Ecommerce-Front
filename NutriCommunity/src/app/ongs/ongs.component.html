@@ -1,1 +1,64 @@
-<p>ongs works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-columns">
+                <a data-toggle="modal" data-target="#cadastroOng">
+                    <div class="card">
+                        <img class="card-img-top" src="" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Adicionar ONG</h5>
+                        </div>
+                    </div>
+                </a>
+                <a routerLink='/produtos'>
+                    <div class="card" *ngFor='let item of listaOngs'>
+                        <img class="card-img-top" src="" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.nomeOng}}</h5>
+                            <p class="card-text">{{item.localAtuacao}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="cadastroOng" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloOng">Cadastrar ONG</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="titulo">Nome</label>
+                    <input [(ngModel)]='nome' type="text" class="form-control" id="nome"
+                        placeholder="Digite o nome">
+                </div>
+                <div class="form-group">
+                    <label for="texto">Local de Atuação</label>
+                    <input [(ngModel)]='local' type="text" class="form-control" id="localAtuacao" placeholder="Digite o local de atuação">
+                </div>
+                <div class="form-group">
+                    <label for="texto">Tipo de ONG</label>
+                    <select class="form-control" name="tipo" id="tipo" [(ngModel)]='tipoOng'>
+                        <option value="">Selecione o tipo de ONG</option>
+                        <option value="associacao">Associação</option>
+                        <option value="funsacao">Fundação</option>
+                        <option value="instituicao">Instituição</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" (click)='postOng()' data-dismiss="modal">Publicar</button>
+            </div>
+        </div>
+    </div>
+</div>
