@@ -1,18 +1,19 @@
+<app-menu></app-menu>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="card-columns">
                 <a data-toggle="modal" data-target="#cadastroOng">
-                    <div class="card">
-                        <img class="card-img-top" src="" alt="Imagem de capa do card">
+                    <div class="card card-size mt-5"> 
+                        <img class="img-fluid card-img-top" src="../../assets/img/imagem_adicionar.jpg"  alt="Imagem de capa do card">
                         <div class="card-body">
                             <h5 class="card-title">Adicionar ONG</h5>
                         </div>
                     </div>
                 </a>
                 <a routerLink='/produtos'>
-                    <div class="card" *ngFor='let item of listaOngs'>
-                        <img class="card-img-top" src="" alt="Imagem de capa do card">
+                    <div class="card card-size mt-5" *ngFor='let item of listaOngs'>
+                        <img class="card-img-top" src="{{item.foto}}" alt="Imagem de capa do card">
                         <div class="card-body">
                             <h5 class="card-title">{{item.nomeOng}}</h5>
                             <p class="card-text">{{item.localAtuacao}}</p>
@@ -46,6 +47,11 @@
                     <input [(ngModel)]='local' type="text" class="form-control" id="localAtuacao" placeholder="Digite o local de atuação">
                 </div>
                 <div class="form-group">
+                    <label for="texto">Imagem da ONG</label>
+                    <input [(ngModel)]='imagem' type="text" class="form-control" id="imagem" placeholder="Insira o url da Imagem">
+
+                </div>
+                <div class="form-group">
                     <label for="texto">Tipo de ONG</label>
                     <select class="form-control" name="tipo" id="tipo" [(ngModel)]='tipoOng'>
                         <option value="">Selecione o tipo de ONG</option>
@@ -62,3 +68,4 @@
         </div>
     </div>
 </div>
+<app-rodape></app-rodape>

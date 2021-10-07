@@ -17,6 +17,7 @@ export class OngsComponent implements OnInit {
   local: string
   tipoOng: string
   nome: string
+  imagem: string
 
   constructor(
     private ongsService: OngsService
@@ -24,7 +25,7 @@ export class OngsComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
-    
+    this.getAllOng()
   }
 
   getAllOng(){
@@ -37,6 +38,7 @@ export class OngsComponent implements OnInit {
     this.ong.nomeOng = this.nome
     this.ong.localAtuacao = this.local
     this.ong.tipo = this.tipoOng
+    this.ong.foto = this.imagem
 
     this.ongsService.postOngs(this.ong).subscribe((resp: Categoria)=>{
       this.ong = resp
