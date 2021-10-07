@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { OngsService } from '../service/ongs.service';
@@ -9,7 +10,6 @@ import { OngsService } from '../service/ongs.service';
   styleUrls: ['./ongs.component.css']
 })
 export class OngsComponent implements OnInit {
-  router: any;
 
   listaOngs: Categoria[]
   ong: Categoria = new Categoria
@@ -18,10 +18,10 @@ export class OngsComponent implements OnInit {
   tipoOng: string
   nome: string
   imagem: string
-  id:number
 
   constructor(
-    private ongsService: OngsService
+    private ongsService: OngsService,
+    private router: Router
   ) { }
 
   ngOnInit(){
@@ -46,16 +46,6 @@ export class OngsComponent implements OnInit {
 
       alert ('ONG Adicionada com sucesso!')
     })
-
-  }
-  encaminharProduto(){
-    alert (this.id)
-    this.ongsService.getByIdOng(this.id).subscribe((resp: Categoria)=>{
-      this.ong = resp
-
-      
-    })
-  
 
   }
 }

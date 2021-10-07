@@ -4,24 +4,25 @@
         <div class="col-md-12">
             <div class="card-columns">
                 <a data-toggle="modal" data-target="#cadastroOng">
-                    <div class="card card-size mt-5"> 
-                        <img class="img-fluid card-img-top" src="../../assets/img/imagem_adicionar.jpg"  alt="Imagem de capa do card">
+                    <div class="card card-size mt-5">
+                        <img class="img-fluid card-img-top" src="../../assets/img/imagem_adicionar.jpg"
+                            alt="Imagem de capa do card">
                         <div class="card-body">
                             <h5 class="card-title">Adicionar ONG</h5>
                         </div>
                     </div>
                 </a>
-        <div class="card card-size mt-5" *ngFor='let item of listaOngs'>
-            <a [(ngModel)]='item.id' (click)='encaminharProduto()'>       
-            <img class="card-img-top" src="{{item.foto}}" alt="Imagem de capa do card">
-        </a>            
-            <div class="card-body">
+                <div class="card card-size mt-5" *ngFor='let item of listaOngs'>
+                    <a routerLink='/produtos/{{item.id}}'>
+                        <img class="card-img-top" src="{{item.foto}}" alt="Imagem de capa do card">
+
+                        <div class="card-body">
                             <h5 class="card-title">{{item.nomeOng}}</h5>
                             <p class="card-text">{{item.localAtuacao}}</p>
                         </div>
-                    
-                    </div>
-                
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
@@ -41,16 +42,17 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="titulo">Nome</label>
-                    <input [(ngModel)]='nome' type="text" class="form-control" id="nome"
-                        placeholder="Digite o nome">
+                    <input [(ngModel)]='nome' type="text" class="form-control" id="nome" placeholder="Digite o nome">
                 </div>
                 <div class="form-group">
                     <label for="texto">Local de Atuação</label>
-                    <input [(ngModel)]='local' type="text" class="form-control" id="localAtuacao" placeholder="Digite o local de atuação">
+                    <input [(ngModel)]='local' type="text" class="form-control" id="localAtuacao"
+                        placeholder="Digite o local de atuação">
                 </div>
                 <div class="form-group">
                     <label for="texto">Imagem da ONG</label>
-                    <input [(ngModel)]='imagem' type="text" class="form-control" id="imagem" placeholder="Insira o url da Imagem">
+                    <input [(ngModel)]='imagem' type="text" class="form-control" id="imagem"
+                        placeholder="Insira o url da Imagem">
 
                 </div>
                 <div class="form-group">
