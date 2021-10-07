@@ -1,0 +1,12 @@
+
+
+.card-size{
+    height: 270px; width: 200px;
+}
+img{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

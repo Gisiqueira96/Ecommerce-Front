@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+import { Categoria } from '../model/Categoria';
+import { OngsService } from '../service/ongs.service';
 
 @Component({
   selector: 'app-ongs',
@@ -7,9 +11,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OngsComponent implements OnInit {
 
-  constructor() { }
+  listaOngs: Categoria[]
+  ong: Categoria = new Categoria
 
-  ngOnInit(): void {
+  local: string
+  tipoOng: string
+  nome: string
+  imagem: string
+
+  constructor(
+    private ongsService: OngsService,
+    private router: Router
+  ) { }
+
+  ngOnInit(){
+    window.scroll(0,0)
+    this.getAllOng()
   }
 
+  getAllOng(){
+    this.ongsService.getAllOngs().subscribe((resp: Categoria[])=>{
+      this.listaOngs = resp
+    })
+  }
+
+  postOng(){
+    this.ong.nomeOng = this.nome
+    this.ong.localAtuacao = this.local
+    this.ong.tipo = this.tipoOng
+    this.ong.foto = this.imagem
+
+    this.ongsService.postOngs(this.ong).subscribe((resp: Categoria)=>{
+      this.ong = resp
+
+      alert ('ONG Adicionada com sucesso!')
+    })
+
+  }
 }
