@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
+import { Produto } from '../model/Produto';
 import { OngsService } from '../service/ongs.service';
 
 @Component({
@@ -12,12 +11,14 @@ import { OngsService } from '../service/ongs.service';
 export class OngsComponent implements OnInit {
 
   listaOngs: Categoria[]
-  ong: Categoria = new Categoria
+  ong: Categoria = new Categoria()
 
   local: string
   tipoOng: string
   nome: string
   imagem: string
+
+  listaProduto: Produto[]
 
   constructor(
     private ongsService: OngsService
@@ -34,6 +35,12 @@ export class OngsComponent implements OnInit {
     })
   }
 
+  findByIdOng(id: number){
+    return this.ongsService.getByIdOng(id).subscribe((resp)=>{
+      this.ong = resp
+    })
+  }
+
   postOng(){
     this.ong.nomeOng = this.nome
     this.ong.localAtuacao = this.local
@@ -46,5 +53,12 @@ export class OngsComponent implements OnInit {
       alert ('ONG Adicionada com sucesso!')
     })
 
+  }
+
+  putOng(){
+    this.ongsService.putOng(this.ong).subscribe((resp: Categoria)=>{
+      this.ong = resp
+      alert ('ONG atualizada com sucesso!')
+    })
   }
 }

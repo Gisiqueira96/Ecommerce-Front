@@ -38,6 +38,11 @@
         <h5>{{item.nomeProduto}}</h5>
         <p>{{item.descricao}}</p>
       </div>
+
+      <div>
+        <button class="btn btn-info mr-4" [routerLink]="['/produto-edit', item.id]">Atualizar</button>
+        <button class="btn btn-danger">Deletar</button>
+      </div>
     </div>
   </div>
 </div>

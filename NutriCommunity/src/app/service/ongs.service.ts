@@ -29,4 +29,8 @@ export class OngsService {
     return this.http.post<Categoria>('https://nutricommunity.herokuapp.com/categoria', ongs, this.token)
   }
 
+  putOng(ongs: Categoria): Observable<Categoria>{
+    return this.http.put<Categoria>('https://nutricommunity.herokuapp.com/categoria', ongs, this.token)
+  }
+
 }

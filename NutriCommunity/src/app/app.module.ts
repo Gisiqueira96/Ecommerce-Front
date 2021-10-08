@@ -18,6 +18,7 @@ import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
 import { HomeComponent } from './home/home.component';
 import { OngsComponent } from './ongs/ongs.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 
 
 
@@ -38,6 +39,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
     HomeComponent,
     OngsComponent,
     ProdutosComponent,
+    ProdutoEditComponent
    
 
   ],

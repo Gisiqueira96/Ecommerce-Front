@@ -13,7 +13,7 @@
                     </div>
                 </a>
                 <div class="card card-size mt-5" *ngFor='let item of listaOngs'>
-                    <a routerLink='/produtos/{{item.id}}'>
+                    <a [routerLink]="['/ongs/', item.id]">
                         <img class="card-img-top" src="{{item.foto}}" alt="Imagem de capa do card">
 
                         <div class="card-body">
@@ -21,6 +21,11 @@
                             <p class="card-text">{{item.localAtuacao}}</p>
                         </div>
                     </a>
+
+                    <div>
+                        <a data-toggle="modal" data-target="#atualizaOng" (click)="findByIdOng(item.id)" class="mr-4">Atualizar</a>
+                        <a href="">Deletar</a>
+                    </div>
                 </div>
 
             </div>
@@ -28,7 +33,7 @@
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal Cadastra Ong-->
 <div class="modal fade" id="cadastroOng" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -68,6 +73,51 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-success" (click)='postOng()' data-dismiss="modal">Publicar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Atualiza Ong-->
+<div class="modal fade" id="atualizaOng" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloOng">Cadastrar ONG</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="titulo">Nome</label>
+                    <input [(ngModel)]='ong.nomeOng' type="text" class="form-control" id="nome" placeholder="Digite o nome">
+                </div>
+                <div class="form-group">
+                    <label for="texto">Local de Atuação</label>
+                    <input [(ngModel)]='ong.localAtuacao' type="text" class="form-control" id="localAtuacao"
+                        placeholder="Digite o local de atuação">
+                </div>
+                <div class="form-group">
+                    <label for="texto">Imagem da ONG</label>
+                    <input [(ngModel)]='ong.foto' type="text" class="form-control" id="imagem"
+                        placeholder="Insira o url da Imagem">
+
+                </div>
+                <div class="form-group">
+                    <label for="texto">Tipo de ONG</label>
+                    <select class="form-control" name="tipo" id="tipo" [(ngModel)]='ong.tipo'>
+                        <option value="">Selecione o tipo de ONG</option>
+                        <option value="associacao">Associação</option>
+                        <option value="funsacao">Fundação</option>
+                        <option value="instituicao">Instituição</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" (click)='putOng()' data-dismiss="modal">Atualizar</button>
             </div>
         </div>
     </div>
