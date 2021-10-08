@@ -1,14 +1,44 @@
 <app-menu></app-menu>
 <div class="container">
-    <div class="carousel-inner">
-    <div class="carousel-item active">
-        <img src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>...</h5>
-          <p>...</p>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="titulo">Nome</label>
+        <input [(ngModel)]='nome' type="text" class="form-control" id="nome" placeholder="Digite o nome do produto">
       </div>
+      <div class="form-group">
+        <label for="texto">Descrição do Produto</label>
+        <input [(ngModel)]='descricaoProduto' type="text" class="form-control" id="localAtuacao"
+          placeholder="Digite a descrição do produto">
+      </div>
+      <div class="form-group">
+        <label for="texto">Imagem do Produto</label>
+        <input [(ngModel)]='imagem' type="text" class="form-control" id="imagem" placeholder="Insira o url da Imagem">
+      </div>
+      <div class="form-group">
+        <label for="texto">Estoque</label>
+        <input [(ngModel)]='estoqueProduto' type="text" class="form-control" id="imagem"
+          placeholder="Insira o url da Imagem">
+      </div>
+      <div class="form-group">
+        <label for="texto">Valor</label>
+        <input [(ngModel)]='preco' type="text" class="form-control" id="imagem" placeholder="Digite o valor do produto">
+      </div>
+
+      <button type="button" class="btn btn-danger">Cancelar</button>
+      <button type="button" class="btn btn-success" (click)='postProduto()'>Publicar</button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="carousel-inner">
+    <div class="carousel-item active" *ngFor='let item of ong.produto'>
+      <img src="{{item.foto}}" alt="foto do Produto">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{item.nomeProduto}}</h5>
+        <p>{{item.descricao}}</p>
+      </div>
+    </div>
+  </div>
 </div>
 <app-rodape></app-rodape>
-

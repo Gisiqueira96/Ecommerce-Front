@@ -20,8 +20,7 @@ export class OngsComponent implements OnInit {
   imagem: string
 
   constructor(
-    private ongsService: OngsService,
-    private router: Router
+    private ongsService: OngsService
   ) { }
 
   ngOnInit(){
