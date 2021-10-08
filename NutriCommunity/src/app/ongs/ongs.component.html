@@ -24,7 +24,7 @@
 
                     <div>
                         <a data-toggle="modal" data-target="#atualizaOng" (click)="findByIdOng(item.id)" class="mr-4">Atualizar</a>
-                        <a href="">Deletar</a>
+                        <a  data-toggle="modal" data-target="#deleteOng"  (click)="findByIdOng(item.id)">Deletar</a>
                     </div>
                 </div>
 
@@ -118,6 +118,22 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-success" (click)='putOng()' data-dismiss="modal">Atualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Cadastra Ong-->
+<div class="modal fade" id="deleteOng" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Apagar ONG</h5>
+                <div class="modal-footer">
+                <label for="titulo">Você deseja mesmo apagar a ong {{ong.nomeOng}}? Todos os produtos relacionados serão igualmente apagados. </label>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
+                <button type="button" class="btn btn-success" (click)='deleteOng()' data-dismiss="modal">Sim</button>
             </div>
         </div>
     </div>

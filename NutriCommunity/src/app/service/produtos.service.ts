@@ -26,4 +26,8 @@ export class ProdutosService {
   putProduto(produto: Produto): Observable<Produto>{
     return this.http.put<Produto>('https://nutricommunity.herokuapp.com/produto', produto, this.token)
   }
+
+  deleteProduto(id: number){
+    return this.http.delete(`https://nutricommunity.herokuapp.com/produto/${id}`, this.token)
+  }
 }

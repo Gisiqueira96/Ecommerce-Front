@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { OngsComponent } from './ongs/ongs.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 
 
 
@@ -39,7 +40,8 @@ import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component
     HomeComponent,
     OngsComponent,
     ProdutosComponent,
-    ProdutoEditComponent
+    ProdutoEditComponent,
+    ProdutoDeleteComponent
    
 
   ],

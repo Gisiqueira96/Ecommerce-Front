@@ -46,6 +46,7 @@ export class ProdutosComponent implements OnInit {
     this.produtosService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
       alert ('Produto adicionado com sucesso!')
+      
 
     })
   }

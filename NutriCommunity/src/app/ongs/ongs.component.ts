@@ -19,6 +19,7 @@ export class OngsComponent implements OnInit {
   imagem: string
 
   listaProduto: Produto[]
+  
 
   constructor(
     private ongsService: OngsService
@@ -27,6 +28,7 @@ export class OngsComponent implements OnInit {
   ngOnInit(){
     window.scroll(0,0)
     this.getAllOng()
+
   }
 
   getAllOng(){
@@ -51,6 +53,7 @@ export class OngsComponent implements OnInit {
       this.ong = resp
 
       alert ('ONG Adicionada com sucesso!')
+      this.getAllOng()
     })
 
   }
@@ -59,6 +62,14 @@ export class OngsComponent implements OnInit {
     this.ongsService.putOng(this.ong).subscribe((resp: Categoria)=>{
       this.ong = resp
       alert ('ONG atualizada com sucesso!')
+      this.getAllOng()
+    })
+  }
+
+  deleteOng(){
+    this.ongsService.deleteOng(this.ong.id).subscribe(() => {
+      alert('Produto apagado com sucesso!')
+      this.getAllOng()
     })
   }
 }

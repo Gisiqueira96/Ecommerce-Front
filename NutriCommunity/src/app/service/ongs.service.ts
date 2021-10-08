@@ -33,4 +33,8 @@ export class OngsService {
     return this.http.put<Categoria>('https://nutricommunity.herokuapp.com/categoria', ongs, this.token)
   }
 
+  deleteOng(id: number){
+    return this.http.delete(`https://nutricommunity.herokuapp.com/categoria/${id}`, this.token)
+  }
+
 }
