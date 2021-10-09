@@ -1,53 +1,52 @@
 
-
-<div class="modal fade cadastro" data-backdrop='static' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-        <img class="top-image"src="../../assets/img/pessoasUnidas.svg" alt="Pessoas Unidas">
-    <div class="modal-content bg-dividido">
-        
-        <div class="container-fluid">
-            <div class="row d-flex align-items-center">
-                <div class="col-md-12 mb-5 mt-2">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-md-10">
-                            <button type="button" class="close mt-3" data-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            <h1  class="text-left mb-3 title-modal mt-3">Cadastrar</h1>
-                            <div class="form-group">
-                                <label for="nome">Nome</label>
-                                <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
-                                <small></small>
-                            </div>
-                            <div class="form-group">
-                                <label for="usuario">Usuário</label>
-                                <input [(ngModel)]='user.email' class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
-                            </div>
-                            <div class="form-group">
-                                <label for="senha">Senha</label>
-                                <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
-                            </div>
-                            <div class="form-group">
-                                <label for="confirmSenha">Senha</label>
-                                <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme a sua senha">
-                            </div>
-                            <div class="form-group">
-                                <label for="tipo">Tipo de Usuário</label>
-                             <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
-                             <option>Selecione o tipo de usuário</option>   
-                             <option value="normal">Normal</option>
-                             <option value="adm">Administrador</option>
-                            </select>
-                            
-                            </div>
-                            <div class="d-flex justify-content-left">
-                                <button type="submit" class="btn btn-verdenutri" (click)='cadastrar()'>Cadastrar</button>
-                            </div>
-                        </div>
-                    </div>
+<div class="container-fluid p-0 d-flex align-items-center justify-content-start ">
+    <div class="box-form">
+        <div class="row d-flex align-items-center m-0">
+            <div class="col-md-9 p-5">
+                <h1 class="text-left mb-3 title-modal mt-3">Cadastrar</h1>
+                <div class="form-group">
+                    
+                    <input [(ngModel)]='user.nome' class="form-control" type="text" id="nome"
+                        placeholder="Nome" (focusout)='validaNome()' (click)='limpaErroNome()'>
+                    <small id="valida-nome" [style.visibility]="msgNome"> <img src="../../assets/img/alertSign.svg" height="15px" class="pb-1" alt="alerta"> O nome deve conter ao menos duas letras</small>
                 </div>
+                <div class="form-group">
+                    
+                    <input [(ngModel)]='user.email' class="form-control" type="text" name="usuario" id="usuario"
+                        placeholder="E-mail" (focusout)='validaEmail()' (click)='limpaErroEmail()'>
+                        <small id="valida-email" [style.visibility]="msgEmail"> <img src="../../assets/img/alertSign.svg" height="15px" class="pb-1" alt="alerta"> Deve conter um e-mail válido</small>
+               
+                </div>
+                <div class="form-group">
+                   
+                    <input [(ngModel)]='user.senha' class="form-control" type="password" name="senha" id="senha"
+                        placeholder="Senha (mínimo de 6 caracteres)" (focusout)='validaSenha()' (click)='limpaErroSenha()'>
+                        <small id="valida-senha" [style.visibility]="msgSenha"> <img src="../../assets/img/alertSign.svg" height="15px" class="pb-1" alt="alerta"> A senha deve conter no mínimo 6 caracteres</small>
+               
+                </div>
+                <div class="form-group">
+                    <input  [(ngModel)]='confirmarSenha' class="form-control" type="password" name="confirmSenha"
+                        id="confirmSenha" placeholder="Confirmar a senha" (focusout)='validaConfirma()' (click)='limpaErroConfirma()'>
+                        <small id="valida-confirmaSenha" [style.visibility]="msgConfirma"> <img src="../../assets/img/alertSign.svg" height="15px" class="pb-1" alt="alerta"> As senhas são diferentes</small>
+               
+                </div>
+                <div class="form-group">
+                    <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)' (focus)=validaTipo($event)>
+                        <option>Selecione o tipo de usuário</option>
+                        <option value="normal">Normal</option>
+                        <option value="adm">Administrador</option>
+                    </select>
+                    <small id="valida-tipo" [style.visibility]="msgTipo"> <img src="../../assets/img/alertSign.svg" height="15px" class="pb-1" alt="alerta"> Selecione um tipo de usuário</small>
+               
+                </div>
+                <div class="d-flex justify-content-left">
+                    <button type="submit" id="botaoCadastrar"class="btn btn-verdenutri" (click)='cadastrar()'>Cadastrar</button>
+                </div>
+                
+            </div>
+            <div class="col-md-5 d-flex div-caridade p-0">
+                <img src="../../assets/img/Charity-bro.svg" class="img-caridade" alt="ilustração de doação alimentícia">
             </div>
         </div>
     </div>
-  </div>
 </div>
