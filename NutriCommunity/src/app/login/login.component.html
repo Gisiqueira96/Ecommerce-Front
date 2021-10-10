@@ -1,41 +1,41 @@
+<div class="container-fluid p-0 d-flex align-items-center justify-content-end ">
+    <!--região com fundo claro-->
+    <div class="box-form">
+        <div class="row d-flex align-items-center  m-0">
+            <!--Imagem lateral-->
+            <div class="col-md-6 d-flex div-img-login px-0">
+                <img src="../../assets/img/Together-bro.svg" class="img-login" alt="ilustração de grupo de pessoas">
+            </div>
+            <!--Área dos inputs-->
+            <div class="col-md-9 conteudo-input">
+                <h1 class="text-left mb-3 mt-3">Logar</h1>
 
+                <!--Div do input de email-->
+                <div class="form-group">
+                    <input [(ngModel)]='userLogin.email' class="form-control" type="text" id="usuario" placeholder="E-mail" (focusout)='validaEmail()' (click)='limpaErroEmail()'>
+                    <small id="valida-email" [style.visibility]="msgEmail"> <img src="../../assets/img/alertSign.svg"
+                            height="15px" class="pb-1" alt="alerta"> Deve conter um e-mail válido</small>
+                </div>
 
+                <!--Div do input de senha-->
+                <div class="form-group">
+                    <input [(ngModel)]='userLogin.senha' class="form-control" type="password" id="senha" placeholder="Senha" (focusout)='validaSenha()' (click)='limpaErroSenha()'>
+                    <small id="valida-senha" [style.visibility]="msgSenha"> <img src="../../assets/img/alertSign.svg"
+                            height="15px" class="pb-1" alt="alerta"> A senha deve conter no mínimo 6 caracteres</small>
+                </div>
 
-<div class="modal fade logar " data-backdrop='static' tabindex="-1" role="dialog" aria-hidden="false">
-  <div class="modal-dialog modal-lg">
-        <img class="top-image"src="../../assets/img/pessoasUnidas.svg" alt="Pessoas Unidas">
-    <div class="modal-content">
-        
-        <div class="container-fluid">
-            <div class="row d-flex align-items-center">
-                <div class="col-md-12 mb-5 mt-2">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-md-10">
-                            <button type="button" class="close mt-3" data-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            <h1 class="text-left mb-3 title-modal mt-3">Logar</h1>
-                            <div class="form-group">
-                                <label for="usuario">Usuário</label>
-                                <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
-                            </div>
-                            <div class="form-group">
-                                <label for="senha">Senha</label>
-                                <input class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
-                            </div>
-                            <div class="d-flex justify-content-left">
-                                <button type="submit" class="btn btn-verdenutri">Entrar</button>
-                            </div>
-                            <hr>
-                            <p>Não tem uma conta? Cadastre-se!</p>
-                            <div class="d-flex justify-content-left">
-                                <button type="submit" class="btn btn-outline-verdenutri" data-toggle="modal" data-target=".cadastro" data-dismiss="modal" >Criar Conta</button>
-                            </div>
-                        </div>
-                    </div>
+                <!--Div do botão de Entrar-->
+                <div class="d-flex justify-content-left">
+                    <button type="submit" id="botaoCadastrar" class="btn btn-verdenutri" (click)='logar()'>Entrar</button>
+                </div>
+
+                <hr class="mb-2">
+                <!--Div do botão de Criar Conta-->
+                <label class="titulo-criar-conta">Não tem uma conta? Cadastre-se!</label>
+                <div class="d-flex justify-content-left">
+                    <button type="submit" id="botaoCadastrar" class="btn btn-verdenutri-line mt-1" routerLink='/cadastro'>Criar Conta</button>
                 </div>
             </div>
         </div>
     </div>
-  </div>
 </div>

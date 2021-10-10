@@ -13,9 +13,11 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastroComponent implements OnInit {
 
+  //variáveis para auxiliar o consumo
   user: User = new User()
   confirmarSenha: string
   tipoUsuario: string
+
   //variáveis para as mensagens de alerta nos inputs
   msgNome: string
   msgEmail: string
@@ -41,7 +43,7 @@ export class CadastroComponent implements OnInit {
   }
   
       
-
+//Funções de limpar mensagens de alerta ao clicar no input
   limpaErroNome(){
     this.msgNome = "hidden"
   }
@@ -54,8 +56,10 @@ export class CadastroComponent implements OnInit {
   limpaErroConfirma(){
     this.msgConfirma = "hidden"
   }
+
+  //Funções para validar os dados inseridos pelo usuário
   validaNome() {
-    if (this.user.nome.length >= 2) {
+    if (this.user.nome != undefined && this.user.nome.length >= 2) {
       this.nomeOk = true
       return this.msgNome = "hidden"
     }
@@ -64,7 +68,7 @@ export class CadastroComponent implements OnInit {
   }
 
   validaEmail() {
-    if (this.user.email.includes("@") && this.user.email.includes(".")) {
+    if (this.user.email != undefined && this.user.email.includes("@") && this.user.email.includes(".")) {
       this.emailOk = true
       return this.msgEmail = "hidden"
     }
@@ -72,7 +76,7 @@ export class CadastroComponent implements OnInit {
     return this.msgEmail = "visible"
   }
   validaSenha() {
-    if (this.user.senha.length >= 6) {
+    if (this.user.senha != undefined && this.user.senha.length >= 6) {
       this.senhaOk = true
       return this.msgSenha = "hidden"
     }
@@ -109,7 +113,7 @@ export class CadastroComponent implements OnInit {
     return this.msgTipo="hidden"  
     
   }
-  
+  //Função de cadastramento
   cadastrar() {
     this.user.tipo = this.tipoUsuario
     if (this.nomeOk && this.senhaOk && this.emailOk && this.confirmaOk && this.tipoOk) {
@@ -118,11 +122,13 @@ export class CadastroComponent implements OnInit {
         this.router.navigate(['/home'])
         alert('Usuário cadastrado com sucesso!')
       }, erro =>{
+        //caso ocorra conflito (e-mail já cadastrado no banco de dados)
         if(erro.status == 409){
           alert("E-mail já cadastrado!")
         }
       })
     }
+    //Alerta o usuário a preencher os inputs antes de se cadastrar
      else {
       if(!this.nomeOk){
         this.msgNome = "visible"
