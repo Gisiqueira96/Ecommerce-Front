@@ -6,3 +6,7 @@
     color: #012340;
     font-weight: bold;
 }
+
+.ponteiro{
+    cursor: pointer;
+}
