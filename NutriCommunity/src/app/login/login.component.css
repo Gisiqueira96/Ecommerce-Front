@@ -1,52 +1,151 @@
-#img-bg{
-    min-height:  900px;
-    background-repeat: no-repeat;
+/*Background*/
+
+.container-fluid {
+    background: linear-gradient(0deg, #5299d3 0%, #012340 100%);
     background-size: cover;
 }
-.btn-verdenutri{
+
+#bg-blue {
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+
+/*Imagem Lateral*/
+
+.div-img-login {
+    position: absolute;
+    left: -400px;
+}
+
+.img-login {
+    margin-top: 20vh;
+}
+
+
+/*Formatações dos Input*/
+
+.conteudo-input {
+    padding-left: 20vw;
+    padding-right: auto;
+    padding-top: 20vh;
+}
+
+.box-form {
+    box-sizing: border-box;
+    width: 70vw;
+    height: 100vh;
+    background-color: #F3F3F3;
+    position: relative;
+}
+
+h1 {
+    font-weight: bold;
+    color: #012340;
+}
+
+label {
+    color: #012340;
+    font-size: 80%;
+}
+
+small {
+    color: #a61717;
+    visibility: hidden;
+}
+
+option {
+    border-radius: 30px;
+}
+
+input,
+select {
+    border-color: #012340d0;
+    border-radius: 15px;
+}
+
+
+/*Botões*/
+
+.btn-verdenutri {
     background-color: #17A697;
     color: #F3F3F3;
     border-radius: 50px;
 }
-.btn-verdenutri:hover{
-    background: #012340;
-}
 
-.title-modal{
-font-weight: bold;
-color: #012340;
-}
-label{
-    color: #012340;
-}
-input, select{
-    border-radius: 20px;
-    border-color: #0123406c;
-    background-color: #F3F3F3;
-}
-.modal-content{
-    background-color: #F3F3F3;
-border-radius:0px 0px 30px 30px;
-border-style: none;
-margin-top: 0px;
-
-}
-.close{
-    color: #012340;
-    border-radius: 30px;
-    outline: none;
-    font-size: 35px;
-}
-.btn-outline-verdenutri{
-    border-color:#17A697;
-    background-color: #F3F3F3;
+.btn-verdenutri-line {
+    border-color: #17A697;
     color: #17A697;
     border-radius: 50px;
 }
-.btn-outline-verdenutri:hover{
+
+.btn-verdenutri:hover {
+    background-color: #012340;
+}
+
+.btn-verdenutri-line:hover {
     background-color: #17A697;
     color: #F3F3F3;
 }
-.fade{
-    background-color: #012340a9;
+
+@media only screen and (max-width:1200px) {
+    /*Imagem Lateral*/
+    .div-img-login {
+        position: absolute;
+        left: -200px;
+    }
+}
+
+@media only screen and (max-width:780px) {
+    /*Imagem Lateral*/
+    .div-img-login {
+        position: absolute;
+        left: 0;
+        bottom: -450px;
+        right: 0;
+        margin-left: 100;
+        margin-right: auto;
+        padding: 0px;
+        background-color: #376D9A;
+        z-index: -1;
+    }
+    .img-login {
+        margin-top: 0vh;
+    }
+    /*Formatações dos Input*/
+    .conteudo-input {
+        padding: 0px;
+        padding-right: 20px;
+        padding-left: 40px;
+    }
+    .box-form {
+        box-sizing: border-box;
+        width: 100vw;
+        background-color: #F3F3F3;
+        border-radius: 0px;
+        position: relative;
+        padding: 0px;
+        margin: 0px;
+        z-index: 0;
+    }
+    .form-group {
+        z-index: 1;
+    }
+    .container-fluid {
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    /*Imagem Lateral*/
+    .div-caridade {
+        bottom: -200px;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    /*Imagem Lateral*/
+    .div-caridade {
+        bottom: -50px;
+    }
 }
