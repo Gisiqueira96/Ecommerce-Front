@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card-columns">
-                <a data-toggle="modal" data-target="#cadastroOng">
+                <a *ngIf='authService.adm()' data-toggle="modal" data-target="#cadastroOng">
                     <div class="card card-size mt-5">
                         <img class="img-fluid card-img-top" src="../../assets/img/imagem_adicionar.jpg"
                             alt="Imagem de capa do card">
@@ -23,8 +23,8 @@
                     </a>
 
                     <div>
-                        <a data-toggle="modal" data-target="#atualizaOng" (click)="findByIdOng(item.id)" class="mr-4">Atualizar</a>
-                        <a  data-toggle="modal" data-target="#deleteOng"  (click)="findByIdOng(item.id)">Deletar</a>
+                        <a *ngIf='authService.adm()' data-toggle="modal" data-target="#atualizaOng" (click)="findByIdOng(item.id)" class="mr-4">Atualizar</a>
+                        <a *ngIf='authService.adm()' data-toggle="modal" data-target="#deleteOng"  (click)="findByIdOng(item.id)">Deletar</a>
                     </div>
                 </div>
 

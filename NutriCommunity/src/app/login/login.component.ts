@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   msgSenha: string
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     private router: Router
   ) { }
 

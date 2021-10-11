@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AuthService } from '../service/auth.service';
 import { OngsService } from '../service/ongs.service';
 import { ProdutosService } from '../service/produtos.service';
 
@@ -23,7 +24,8 @@ export class ProdutosComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private produtosService: ProdutosService,
-    private ongService: OngsService
+    private ongService: OngsService,
+    public authService: AuthService
   ) { }
 
   ngOnInit(){

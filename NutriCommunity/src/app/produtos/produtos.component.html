@@ -1,5 +1,5 @@
 <app-menu></app-menu>
-<div class="container">
+<div *ngIf='authService.adm()' class="container">
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">
@@ -25,8 +25,8 @@
         <input [(ngModel)]='preco' type="text" class="form-control" id="imagem" placeholder="Digite o valor do produto">
       </div>
 
-      <button type="button" class="btn btn-danger">Cancelar</button>
-      <button type="button" class="btn btn-success" (click)='postProduto()'>Publicar</button>
+      <button *ngIf='authService.adm()' type="button" class="btn btn-danger">Cancelar</button>
+      <button *ngIf='authService.adm()' type="button" class="btn btn-success" (click)='postProduto()'>Publicar</button>
     </div>
   </div>
 </div>
@@ -40,8 +40,8 @@
       </div>
 
       <div>
-        <button class="btn btn-info mr-4" [routerLink]="['/produto-edit', item.id]">Atualizar</button>
-        <button class="btn btn-danger" [routerLink]="['/produto-delete', item.id]">Deletar</button>
+        <button *ngIf='authService.adm()' class="btn btn-info mr-4" [routerLink]="['/produto-edit', item.id]">Atualizar</button>
+        <button *ngIf='authService.adm()' class="btn btn-danger" [routerLink]="['/produto-delete', item.id]">Deletar</button>
       </div>
     </div>
   </div>

@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { OngsComponent } from './ongs/ongs.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { DuvidasFrequentesComponent } from './duvidas-frequentes/duvidas-frequentes.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -17,10 +18,11 @@ const routes: Routes = [
   {path:'ongs', component:OngsComponent},
   {path:'ongs/:id', component:ProdutosComponent},
   {path:'produto-edit/:id', component:ProdutoEditComponent},
-  {path:'produto-delete/:id', component:ProdutoDeleteComponent}
+  {path:'produto-delete/:id', component:ProdutoDeleteComponent},
   {path:'produtos', component:ProdutosComponent},
   {path:'cadastro',component:CadastroComponent},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  {path: 'duvidas-frequentes', component: DuvidasFrequentesComponent}
 
 ];
 

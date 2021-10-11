@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AuthService } from '../service/auth.service';
 import { OngsService } from '../service/ongs.service';
 
 @Component({
@@ -22,6 +24,7 @@ export class OngsComponent implements OnInit {
   
 
   constructor(
+    public authService: AuthService,
     private ongsService: OngsService
   ) { }
 

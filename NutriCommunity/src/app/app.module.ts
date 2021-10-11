@@ -46,7 +46,7 @@ import { DuvidasFrequentesComponent } from './duvidas-frequentes/duvidas-frequen
     ProdutosComponent,
 
     ProdutoEditComponent,
-    ProdutoDeleteComponent
+    ProdutoDeleteComponent,
 
     DuvidasFrequentesComponent,
 
