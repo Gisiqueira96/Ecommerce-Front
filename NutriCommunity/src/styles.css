@@ -1,16 +1,1 @@
 /* You can add global styles to this file, and also import other style files */
-::-webkit-scrollbar{
-    width: 12px;
-}
-
-::-webkit-scrollbar-thumb{
-    background: #17A697;
-}
-
-::-webkit-scrollbar-track{
-    background: #012340;
-}
-
-.tipoFonte{
-    font-family: 'Bebas Neue' ,'Franklin Gothic Medium', Arial, sans-serif;
-}
