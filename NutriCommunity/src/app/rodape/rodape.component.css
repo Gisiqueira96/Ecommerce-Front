@@ -28,14 +28,35 @@ ul.social-network li{
     padding: 10x;
 }
 
+.fa-linkedin-square{
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.fa-facebook-square{
+   transition: all 1s;
+    cursor: pointer;
+}
+
+.fa-instagram{
+    transition: all 1s;
+    cursor: pointer;
+}
+
 .fa-linkedin-square:hover{
     color: #0e76a8;
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
 }
 
 .fa-facebook-square:hover{
     color: #3b5998;
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
 }
 
 .fa-instagram:hover{
     color: #c13584;
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
 }
