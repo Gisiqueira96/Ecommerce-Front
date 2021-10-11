@@ -6,6 +6,7 @@ export class Produto{
     public descricao: string
     public estoque: number
     public valor: number
-    public categoria: Categoria[]
+    public categoria: Categoria
+    public foto: string
 
 }

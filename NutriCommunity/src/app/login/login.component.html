@@ -29,11 +29,46 @@
                     <button type="submit" id="botaoCadastrar" class="btn btn-verdenutri" (click)='logar()'>Entrar</button>
                 </div>
 
+
+<div class="modal fade logar " data-backdrop='static' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+        <img class="top-image"src="../../assets/img/pessoasUnidas.svg" alt="Pessoas Unidas">
+    <div class="modal-content">
+        
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-12 mb-5 mt-2">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-10">
+                            <button type="button" class="close mt-3" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            <h1 class="text-left mb-3 title-modal mt-3">Logar</h1>
+                            <div class="form-group">
+                                <label for="usuario">Usuário</label>
+                                <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="senha">Senha</label>
+                                <input class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
+                            </div>
+                            <div class="d-flex justify-content-left">
+                                <button type="submit" class="btn btn-verdenutri" data-dismiss="modal" >Entrar</button>
+                            </div>
+                            <hr>
+                            <p>Não tem uma conta? Cadastre-se!</p>
+                            <div class="d-flex justify-content-left">
+                                <button type="submit" class="btn btn-outline-verdenutri" data-toggle="modal" data-target=".cadastro" data-dismiss="modal" >Criar Conta</button>
+                            </div>
+                        </div>
+                    </div>
+
                 <hr class="mb-2">
                 <!--Div do botão de Criar Conta-->
                 <label class="titulo-criar-conta">Não tem uma conta? Cadastre-se!</label>
                 <div class="d-flex justify-content-left">
                     <button type="submit" id="botaoCadastrar" class="btn btn-verdenutri-line mt-1" routerLink='/cadastro'>Criar Conta</button>
+
                 </div>
             </div>
         </div>
