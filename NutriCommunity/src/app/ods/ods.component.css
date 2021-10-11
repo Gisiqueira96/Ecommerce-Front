@@ -1,11 +1,11 @@
 .img-size{
-    height: 200px;
-    max-width: 200px;
-    background-color: #F2D7B6;
+    min-height: 10vw;
+   min-width: 10vw;
+   border-radius: 10px;
+ 
 }
-
-.img-ods{
-    background-image: url();
+.bg-branco-nutry{
+    background-color: #F3F3F3;
 }
 
 a {
