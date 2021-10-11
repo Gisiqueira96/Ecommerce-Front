@@ -1,0 +1,17 @@
+.img-size{
+    height: 200px;
+    max-width: 200px;
+    background-color: #F2D7B6;
+}
+
+.img-ods{
+    background-image: url();
+}
+
+a {
+    text-decoration: none;
+}
+
+.txt-verde {
+    color: #17A697;
+}

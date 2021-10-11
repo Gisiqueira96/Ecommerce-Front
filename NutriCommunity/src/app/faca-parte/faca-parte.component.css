@@ -1,0 +1,10 @@
+.txt-creme{
+    font-weight: 500;
+    color: #F2D7B6;
+}
+
+.bg-dividido{
+    width: 95vw;
+    height: 500px;
+    background: linear-gradient(-20deg, #17A697 50%,#012340 50%);
+}
