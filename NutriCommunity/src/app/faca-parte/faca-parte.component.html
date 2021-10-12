@@ -1,15 +1,41 @@
-<div class="container-fluid">
+<div class="container-fluid bg-diminuido">
     <div class="row">
-        <div class="col-md-12 bg-dividido">
-            <div class="row">
-                <div class="col-sm-2 mt-5">
-                    <h2 class="txt-creme pb-4">Faça Parte da comunidade</h2>
-                    <h5 class="txt-creme">Faça login para ter acesso a diversas ONGs e seus projetos.</h5>
-                    <a class="txt-creme ms-3" routerLink='/cadastro'>
-                        <h5>Cadastrar</h5>
-                    </a>
+
+        <div class="col-md-12 d-flex faca-parte p-0 ">
+            <div class="row d-flex">
+                <div class="bg-dividido"></div>
+                <div class="col-md-4 mt-5 p-0 m-0">
+                    <div class="ml-5">
+                        <h1 class="txt-creme pb-4">Faça Parte da comunidade</h1>
+                        <h5 class="txt-creme">Cadastre-se para ter acesso a diversas ONGs e seus projetos.</h5>
+                        <br>
+                        <a class="txt-creme" routerLink='/cadastro'>
+                            <h2>Cadastrar</h2>
+                        </a>
+                    </div>
+
                 </div>
+                
+                <div class="col-md-8 d-flex justify-content-end video-grande">
+                    
+                    <div class="embed-responsive"></div>
+                    
+                    <video autoplay muted loop id="video-doacao" class="d-flex">
+                        <source src="../../assets/video-doacao.mp4" type="video/mp4">
+                    </video>
+                </div>
+               
             </div>
+           
         </div>
+        
     </div>
+   
+</div>
+<div class="container-fluid p-0 m-0 video-pequeno">
+  
+    <video autoplay muted loop id="video-doacao-2" class="d-flex embed-responsive">
+        <source src="../../assets/video-doacao.mp4" type="video/mp4">
+    </video>
+
 </div>
