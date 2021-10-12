@@ -3,6 +3,30 @@
     height: 700px;
     background: linear-gradient(30deg, #17A697 50%,#012340 50%);
 }
+.dot {
+    height: 45px;
+    width: 45px;
+    color: #012340;
+    font-weight: bolder;    
+    font-size: 35px;
+    background-color: #F2D7B6;
+    border-radius: 50%;
+    display: block;
+    transition: 500ms;
+    
+  }
+  .ajustes-numero{
+      padding-top: 200px;     
+  }
+  .explicacao:hover .dot {
+      transition: 500ms;
+    height: 55px;
+    width: 55px;   
+    font-size: 35px;
+    background-color: #f7e4ce;
+    
+    
+  }
 
 .txt-creme {
     padding-top: 10px;
@@ -12,6 +36,7 @@
 .imgs-como-funciona{
    height: 400px;
    transition: 500ms;
+   position: relative;
 }
 .zoom-img{
     height: 600px;
@@ -20,6 +45,7 @@
 h2, p{
     font-weight: 500;
     color: #F2D7B6;
+    
     justify-content: center;
 }
 p{
@@ -31,11 +57,11 @@ p{
 a{
     text-decoration: none;
 }
-.imgs-como-funciona:hover{
+.explicacao:hover .imgs-como-funciona{
     transition: 500ms;
     height: 450px;
  }
- .imgs-como-funciona:hover ~ p{
+ .explicacao:hover p{
     transition: 500ms;
     opacity: 1;
  }
