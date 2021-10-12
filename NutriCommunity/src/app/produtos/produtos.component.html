@@ -1,7 +1,8 @@
 <app-menu></app-menu>
-<div *ngIf='authService.adm()' class="container">
-  <div class="row">
-    <div class="col-md-12">
+<div  class="container">
+  <div class="row" *ngIf='authService.adm()'>
+    <div class="col-md-12 mt-3 mb-4">
+      <h3 class="text-center">Adicionar Produto</h3>
       <div class="form-group">
         <label for="titulo">Nome</label>
         <input [(ngModel)]='nome' type="text" class="form-control" id="nome" placeholder="Digite o nome do produto">
@@ -25,25 +26,28 @@
         <input [(ngModel)]='preco' type="text" class="form-control" id="imagem" placeholder="Digite o valor do produto">
       </div>
 
-      <button *ngIf='authService.adm()' type="button" class="btn btn-danger">Cancelar</button>
+      <button *ngIf='authService.adm()' type="button" class="btn btn-danger mr-3">Cancelar</button>
       <button *ngIf='authService.adm()' type="button" class="btn btn-success" (click)='postProduto()'>Publicar</button>
     </div>
   </div>
-</div>
-<div class="container">
-  <div class="carousel-inner">
-    <div class="carousel-item active" *ngFor='let item of ong.produto'>
-      <img src="{{item.foto}}" alt="foto do Produto">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{item.nomeProduto}}</h5>
-        <p>{{item.descricao}}</p>
-      </div>
 
-      <div>
-        <button *ngIf='authService.adm()' class="btn btn-info mr-4" [routerLink]="['/produto-edit', item.id]">Atualizar</button>
-        <button *ngIf='authService.adm()' class="btn btn-danger" [routerLink]="['/produto-delete', item.id]">Deletar</button>
+  <div class="row d-flex justify-content-center mt-3 mb-4">
+    <div class="card-deck">
+      <div class="card" *ngFor='let item of ong.produto'>
+        <img class="card-img-top" src="{{item.foto}}" alt="Imagem de capa do card">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{item.nomeProduto}}</h5>
+          <p class="card-text text-center">{{item.descricao}}</p>
+        </div>
+        <div class="mb-3 ml-3 d-flex justify-content-center">
+          <button *ngIf='authService.adm()' class="btn btn-info mr-4 cursor" [routerLink]="['/produto-edit', item.id]">Atualizar</button>
+          <button *ngIf='authService.adm()' class="btn btn-danger mr-4 cursor" [routerLink]="['/produto-delete', item.id]">Deletar</button>
+          <button class="btn btn-success cursor" [routerLink]="['/']">Comprar</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
 <app-rodape></app-rodape>

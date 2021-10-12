@@ -12,26 +12,33 @@
                         </div>
                     </div>
                 </a>
-                <div class="card card-size mt-5" *ngFor='let item of listaOngs'>
-                    <a [routerLink]="['/ongs/', item.id]">
-                        <img class="card-img-top" src="{{item.foto}}" alt="Imagem de capa do card">
+                <div class="card mt-5" *ngFor='let item of listaOngs'>
+                    <div class="card-body">
+                        <a [routerLink]="['/ongs/', item.id]">
+                            <img class="card-img-top mb-4" src="{{item.foto}}" alt="Imagem de capa do card">
+                            <h5 class="card-title text-center">{{item.nomeOng}}</h5>
+                            <p class="card-text text-center">{{item.localAtuacao}}</p>
+                        </a>
 
-                        <div class="card-body">
-                            <h5 class="card-title">{{item.nomeOng}}</h5>
-                            <p class="card-text">{{item.localAtuacao}}</p>
+                        <div class="m-2 text-center">
+                            <a *ngIf='authService.adm()' data-toggle="modal" data-target="#atualizaOng"
+                                (click)="findByIdOng(item.id)" class="mr-4 text-info">
+                                Atualizar
+                            </a>
+                            <a class="text-danger" *ngIf='authService.adm()' data-toggle="modal" data-target="#deleteOng"
+                                (click)="findByIdOng(item.id)">
+                                Deletar
+                            </a>
                         </div>
-                    </a>
-
-                    <div>
-                        <a *ngIf='authService.adm()' data-toggle="modal" data-target="#atualizaOng" (click)="findByIdOng(item.id)" class="mr-4">Atualizar</a>
-                        <a *ngIf='authService.adm()' data-toggle="modal" data-target="#deleteOng"  (click)="findByIdOng(item.id)">Deletar</a>
                     </div>
                 </div>
-
             </div>
+
         </div>
     </div>
 </div>
+<app-rodape></app-rodape>
+
 
 <!-- Modal Cadastra Ong-->
 <div class="modal fade" id="cadastroOng" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
@@ -92,7 +99,8 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="titulo">Nome</label>
-                    <input [(ngModel)]='ong.nomeOng' type="text" class="form-control" id="nome" placeholder="Digite o nome">
+                    <input [(ngModel)]='ong.nomeOng' type="text" class="form-control" id="nome"
+                        placeholder="Digite o nome">
                 </div>
                 <div class="form-group">
                     <label for="texto">Local de Atuação</label>
@@ -131,11 +139,13 @@
             <div class="modal-header">
                 <h5 class="modal-title">Apagar ONG</h5>
                 <div class="modal-footer">
-                <label for="titulo">Você deseja mesmo apagar a ong {{ong.nomeOng}}? Todos os produtos relacionados serão igualmente apagados. </label>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
-                <button type="button" class="btn btn-success" (click)='deleteOng()' data-dismiss="modal">Sim</button>
+                    <label for="titulo">Você deseja mesmo apagar a ong {{ong.nomeOng}}? Todos os produtos relacionados
+                        serão igualmente apagados. </label>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
+                    <button type="button" class="btn btn-success" (click)='deleteOng()'
+                        data-dismiss="modal">Sim</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<app-rodape></app-rodape>
+    <app-rodape></app-rodape>
