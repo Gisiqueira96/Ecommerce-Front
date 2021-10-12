@@ -13,7 +13,6 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
-    private router: Router
   ) { }
   entrar(userLogin:UserLogin):Observable<UserLogin>{
     return this.http.post<UserLogin>('https://nutricommunity.herokuapp.com/usuarios/logar', userLogin)
@@ -27,6 +26,15 @@ export class AuthService {
     let ok: boolean = false
 
     if (environment.token != '') {
+      ok = true
+    }
+
+    return ok
+  }
+  adm() {
+    let ok: boolean = false
+
+    if (environment.tipo == 'adm') {
       ok = true
     }
 
