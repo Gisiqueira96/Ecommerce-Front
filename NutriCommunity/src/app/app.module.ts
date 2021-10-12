@@ -21,8 +21,6 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { DuvidasFrequentesComponent } from './duvidas-frequentes/duvidas-frequentes.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
