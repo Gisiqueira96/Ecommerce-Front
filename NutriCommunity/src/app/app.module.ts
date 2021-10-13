@@ -23,6 +23,7 @@ import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 
 import { DuvidasFrequentesComponent } from './duvidas-frequentes/duvidas-frequentes.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 
@@ -49,6 +50,7 @@ import { DuvidasFrequentesComponent } from './duvidas-frequentes/duvidas-frequen
     ProdutoDeleteComponent,
 
     DuvidasFrequentesComponent,
+      CarrinhoComponent,
 
    
 
