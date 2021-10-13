@@ -22,6 +22,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { DuvidasFrequentesComponent } from './duvidas-frequentes/duvidas-frequentes.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     DuvidasFrequentesComponent,
 
     ProdutoEditComponent,
-    ProdutoDeleteComponent
+    ProdutoDeleteComponent,
+    AlertasComponent
 
 
    
@@ -53,7 +56,8 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy,

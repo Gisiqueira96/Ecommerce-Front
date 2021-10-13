@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from 'src/app/model/Produto';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { ProdutosService } from 'src/app/service/produtos.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-produto-edit',
@@ -16,9 +18,16 @@ export class ProdutoEditComponent implements OnInit {
   constructor(
     private produtoService: ProdutosService,
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private alerta: AlertasService
+    ) { }
 
   ngOnInit() {
+    if(environment.token == ''){
+      this.router.navigate(['/home'])
+      this.alerta.showAlertDanger('Você deve fazer o login antes de entrar')
+    }
+  
     window.scroll(0,0)
 
     this.idProduto = this.route.snapshot.params['id']
@@ -36,7 +45,7 @@ export class ProdutoEditComponent implements OnInit {
   putProduto(){
     return this.produtoService.putProduto(this.produto).subscribe((resp)=>{
       this.produto = resp
-      alert("Produto atualizado")
+      this.alerta.showAlertSuccess("Produto atualizado")
       this.router.navigate([`/ongs/${this.produto.categoria.id}`])
     })
   }

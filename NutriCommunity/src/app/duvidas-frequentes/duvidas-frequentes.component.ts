@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-duvidas-frequentes',
@@ -31,7 +32,9 @@ export class DuvidasFrequentesComponent implements OnInit {
   texto: string
   
   
-  constructor() { }
+  constructor(
+    private alerta: AlertasService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -98,7 +101,9 @@ export class DuvidasFrequentesComponent implements OnInit {
   enviar(){
     
     if(this.nomeOk && this.tipoOk && this.emailOk){
-      alert("Enviado com sucesso")
+      const botaoEnviar = document.getElementById("enviar")
+      botaoEnviar?.setAttribute("data-dismiss", "modal")
+      this.alerta.showAlertSuccess("Enviado com sucesso")
     }
     else {
       if(!this.nomeOk){
