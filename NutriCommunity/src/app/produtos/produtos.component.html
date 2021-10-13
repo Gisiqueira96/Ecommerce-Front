@@ -2,7 +2,7 @@
 <div  class="container">
   <div class="row" *ngIf='authService.adm()'>
     <div class="col-md-12 mt-3 mb-4">
-      <h3 class="text-center">Adicionar Produto</h3>
+      <h1 class="text-center tipoFonte">Adicionar Produto</h1>
       <div class="form-group">
         <label for="titulo">Nome</label>
         <input [(ngModel)]='nome' type="text" class="form-control" id="nome" placeholder="Digite o nome do produto">
@@ -27,7 +27,7 @@
       </div>
 
       <button *ngIf='authService.adm()' type="button" class="btn btn-danger mr-3">Cancelar</button>
-      <button *ngIf='authService.adm()' type="button" class="btn btn-success" (click)='postProduto()'>Publicar</button>
+      <button *ngIf='authService.adm()' type="button" class="btn btn-verdenutri" (click)='postProduto()'>Publicar</button>
     </div>
   </div>
 

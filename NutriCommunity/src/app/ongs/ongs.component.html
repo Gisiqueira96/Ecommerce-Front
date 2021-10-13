@@ -17,17 +17,17 @@
                 <div class="card mt-5" *ngFor='let item of listaOngs'>
                     <div class="card-body">
                         <a [routerLink]="['/ongs/', item.id]" (click)="verificaLogin()">
-                            <img class="card-img-top mb-4 img-size" src="{{item.foto}}" alt="Imagem de capa do card">
+                            <img class="card-img-top mb-4 img-size border-foto" src="{{item.foto}}" alt="Imagem de capa do card">
                             <h5 class="card-title text-center">{{item.nomeOng}}</h5>
                             <p class="card-text text-center">{{item.localAtuacao}}</p>
                         </a>
 
                         <div class="m-3 text-center pointer">
                             <a *ngIf='authService.adm()' data-toggle="modal" data-target="#atualizaOng"
-                                (click)="findByIdOng(item.id)" class="mr-4 text-info">
+                                (click)="findByIdOng(item.id)" class="mr-4 text-white btn bg-verdeProjeto ">
                                 Atualizar
                             </a>
-                            <a class="text-danger" *ngIf='authService.adm()' data-toggle="modal" data-target="#deleteOng"
+                            <a class="text-white btn bg-danger " *ngIf='authService.adm()' data-toggle="modal" data-target="#deleteOng"
                                 (click)="findByIdOng(item.id)">
                                 Deletar
                             </a>
@@ -93,7 +93,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="TituloOng">Atualizar ONG</h5>
+                <h3 class="modal-title tipoFonte" id="TituloOng">Atualizar ONG</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -127,7 +127,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success" (click)='putOng()' data-dismiss="modal">Atualizar</button>
+                <button type="button" class="btn bg-verdeProjeto text-white" (click)='putOng()' data-dismiss="modal">Atualizar</button>
             </div>
         </div>
     </div>
@@ -139,12 +139,12 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content d-flex">
             <div class="modal-header">
-                <h5 class="modal-title">Apagar ONG</h5>
+                <h4 class="modal-title tipoFonte">Apagar ONG</h4>
                 <div class="modal-footer">
                     <label for="titulo">Você deseja mesmo apagar a ong {{ong.nomeOng}}? Todos os produtos relacionados
                         serão igualmente apagados. </label>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
-                    <button type="button" class="btn btn-success" (click)='deleteOng()'
+                    <button type="button" class="btn bg-verdeProjeto text-light" (click)='deleteOng()'
                         data-dismiss="modal">Sim</button>
                 </div>
             </div>
