@@ -9,3 +9,8 @@ a{
     text-decoration: none;
     color: black;
 }
+
+.pointer{
+    cursor: pointer;
+    font-weight: 600;
+}

@@ -20,6 +20,11 @@ export class ProdutosComponent implements OnInit {
   imagem: string
   preco: number
   estoqueProduto: number
+  quantidadeProduto: number
+  idOng: number
+  msgEstoque: string
+  estoqueOk= false
+
 
   constructor(
     private route: ActivatedRoute,
@@ -30,8 +35,8 @@ export class ProdutosComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
-    let id = this.route.snapshot.params['id']
-    this.getOngById(id)
+    this.idOng = this.route.snapshot.params['id']
+    this.getOngById(this.idOng)
   }
   getOngById(id: number){
     this.ongService.getByIdOng(id).subscribe((resp: Categoria)=>{
@@ -48,9 +53,36 @@ export class ProdutosComponent implements OnInit {
     this.produtosService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
       alert ('Produto adicionado com sucesso!')
-      
-
     })
+  }
+
+  findByIdProduto(id: number){
+    return this.produtosService.getByIdProduto(id).subscribe((resp)=>{
+      this.produto = resp
+    })
+  }
+
+  leQuantidade(event: any){
+    if(event.target.value > this.produto.estoque || event.target.value <= 0){
+      this.estoqueOk = false
+      return this.msgEstoque = "visible"
+    }else{
+      this.msgEstoque = "hidden"
+      this.estoqueOk = true
+      return this.quantidadeProduto = event.target.value
+    }
+  }
+
+  alterarEstoque(){
+    if(this.estoqueOk){
+      this.produto.estoque -= this.quantidadeProduto
+      this.produtosService.putProduto(this.produto).subscribe((resp: Produto) => {
+        return this.produto = resp
+      })
+      this.getOngById(this.idOng)
+    } else{
+      this.msgEstoque = "visible"
+    }
   }
 }
 

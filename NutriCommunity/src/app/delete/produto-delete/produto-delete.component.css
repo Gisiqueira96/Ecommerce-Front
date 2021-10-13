@@ -1,0 +1,25 @@
+img{
+    border-radius: 20px 0px 0px 20px;
+    min-width: 60%;
+}
+
+.txt-azulescuro{
+    color: #012340;
+    font-weight: bold;
+}
+
+.bg-creme{
+    background: linear-gradient(90deg, #ffebd300 30%, #FFEBD3 30%, #ffebd3 80%, #ffebd300 80%);
+    border-radius: 20px;
+}
+
+.btn-verdenutri {
+    background-color: #17A697;
+    color: #F3F3F3;
+}
+
+.btn-verdenutri:hover {
+    background-color: #012340;
+}
+
+

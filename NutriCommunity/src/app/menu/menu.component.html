@@ -46,7 +46,7 @@
                                 <a class="dropdown-item " (click)='sair()'>Sair</a>
                 </div>
             </li>
-            <li *ngIf="authService.logado()" class="cesta-compra d-flex justify-content-center">
+            <li  *ngIf="authService.logado() && !authService.adm()" class="cesta-compra d-flex justify-content-center">
 
                 <span class="dot d-flex justify-content-center align-items-center">+</span>
                 <img src="../../assets/cesta.svg" alt="cesta de compras" id="cesta">
