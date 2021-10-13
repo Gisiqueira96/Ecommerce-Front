@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { OngsService } from '../service/ongs.service';
 
@@ -28,7 +28,7 @@ export class OngsComponent implements OnInit {
   constructor(
     public authService: AuthService,
     private ongsService: OngsService,
-    private router: Router
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(){
@@ -67,24 +67,21 @@ export class OngsComponent implements OnInit {
   putOng(){
     this.ongsService.putOng(this.ong).subscribe((resp: Categoria)=>{
       this.ong = resp
-      alert ('ONG atualizada com sucesso!')
+      this.alertas.showAlertSuccess('ONG atualizada com sucesso!')
       this.getAllOng()
     })
   }
 
   deleteOng(){
     this.ongsService.deleteOng(this.ong.id).subscribe(() => {
-      alert('Produto apagado com sucesso!')
+      this.alertas.showAlertSuccess('Produto apagado com sucesso!')
       this.getAllOng()
     })
   }
 
   verificaLogin(){
     if(environment.token == ''){
-      alert("Por favor faça login.")
-      this.router.navigate(['/home'])
-    } else {
-
-    }
+      this.alertas.showAlertDanger("Por favor faça login.")
+    } 
   }
 }

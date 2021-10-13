@@ -53,13 +53,13 @@
 <app-rodape></app-rodape>
 
 <!-- Modal Adicionar ao carrinho-->
-<div class="modal fade" id="adicionaCarrinho" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+<div class="modal fade" tabindex="-1" role="dialog" id="adicionaCarrinho" aria-labelledby="TituloModalCentralizado"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-content"  >
+          <div class="modal-header"  >
                 <h2 class="modal-title" id="TituloOng">Adicionar ao carrinho</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" (click)="limpaInput()">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -69,16 +69,15 @@
                 </div>
                 <div class="form-group">
                     <label for="texto">Quantidade desejada</label>
-                    <input (change)='leQuantidade($event)' type="number" min="1" max="produto.estoque" class="form-control" id="leQuantidade"
-                        placeholder="Digite a quantidade desejada (max: {{produto.estoque}})">
+                    <input (change)='leQuantidade($event)' [value]="valorInput" type="number" min="1" max="produto.estoque" class="form-control" id="leQuantidade"
+                        placeholder="Digite a quantidade desejada (max: {{produto.estoque}})" (click)='limpaErroEstoque()'>
                         <small id="valida-estoque" [style.visibility]="msgEstoque"> <img src="../../assets/img/alertSign.svg"
                           height="15px" class="pb-1" alt="alerta"> Selecione uma quantidade de estoque disponível</small>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button *ngIf='!estoqueOk' type="button" class="btn btn-success" (click)='alterarEstoque()'>Adicionar ao carrinho</button>
-                <button *ngIf='estoqueOk' data-dismiss="modal" type="button" class="btn btn-success" (click)='alterarEstoque()'>Adicionar ao carrinho</button>
+             <button id="adicionaCarrinhoBotao" type="button" class="btn btn-verde-nutri" (click)='alterarEstoque()'>Adicionar ao carrinho</button>
             </div>
         </div>
     </div>

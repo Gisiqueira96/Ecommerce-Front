@@ -5,3 +5,15 @@
 .cursor {
     cursor: pointer;
 }
+small {
+    color: #a61717;
+    visibility: hidden;
+}
+.btn-verdenutri {
+    background-color: #17A697;
+    color: #F3F3F3;
+}
+
+.btn-verdenutri:hover {
+    background-color: #012340;
+}
