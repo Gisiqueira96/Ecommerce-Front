@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
@@ -22,10 +23,12 @@ export class OngsComponent implements OnInit {
 
   listaProduto: Produto[]
   
+  
 
   constructor(
     public authService: AuthService,
-    private ongsService: OngsService
+    private ongsService: OngsService,
+    private router: Router
   ) { }
 
   ngOnInit(){
@@ -74,5 +77,14 @@ export class OngsComponent implements OnInit {
       alert('Produto apagado com sucesso!')
       this.getAllOng()
     })
+  }
+
+  verificaLogin(){
+    if(environment.token == ''){
+      alert("Por favor faça login.")
+      this.router.navigate(['/home'])
+    } else {
+
+    }
   }
 }

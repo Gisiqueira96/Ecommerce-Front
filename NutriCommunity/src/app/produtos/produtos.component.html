@@ -42,7 +42,7 @@
         <div class="mb-3 ml-3 d-flex justify-content-center">
           <button *ngIf='authService.adm()' class="btn btn-info mr-4 cursor" [routerLink]="['/produto-edit', item.id]">Atualizar</button>
           <button *ngIf='authService.adm()' class="btn btn-danger mr-4 cursor" [routerLink]="['/produto-delete', item.id]">Deletar</button>
-          <button class="btn btn-success cursor" [routerLink]="['/']">Comprar</button>
+          <button class="btn btn-success cursor" [routerLink]="['/']">Comprar</button><!--Nessa linha vai o link pro carrinho-->
         </div>
       </div>
     </div>

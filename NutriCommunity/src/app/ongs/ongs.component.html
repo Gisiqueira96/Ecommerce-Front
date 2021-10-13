@@ -14,7 +14,7 @@
                 </a>
                 <div class="card mt-5" *ngFor='let item of listaOngs'>
                     <div class="card-body">
-                        <a [routerLink]="['/ongs/', item.id]">
+                        <a [routerLink]="['/ongs/', item.id]" (click)="verificaLogin()">
                             <img class="card-img-top mb-4" src="{{item.foto}}" alt="Imagem de capa do card">
                             <h5 class="card-title text-center">{{item.nomeOng}}</h5>
                             <p class="card-text text-center">{{item.localAtuacao}}</p>
