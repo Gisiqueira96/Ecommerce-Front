@@ -19,14 +19,9 @@ import { HomeComponent } from './home/home.component';
 import { OngsComponent } from './ongs/ongs.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 
+import { DuvidasFrequentesComponent } from './duvidas-frequentes/duvidas-frequentes.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
-
-import { DuvidasFrequentesComponent } from './duvidas-frequentes/duvidas-frequentes.component';
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -45,10 +40,9 @@ import { DuvidasFrequentesComponent } from './duvidas-frequentes/duvidas-frequen
     OngsComponent,
     ProdutosComponent,
 
-    ProdutoEditComponent,
-    ProdutoDeleteComponent,
-
     DuvidasFrequentesComponent,
+    ProdutoEditComponent,
+    ProdutoDeleteComponent
 
    
 

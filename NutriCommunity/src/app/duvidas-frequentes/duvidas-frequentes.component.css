@@ -1,0 +1,47 @@
+/*Imagem do topo*/
+.top-image{
+    min-width: 50%;
+}
+
+/*Fundo do modal e da tela*/
+.modal-content {
+    background: linear-gradient(-180deg,#f3f3f300 10%,#F3F3F3 10%);
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+    border:none;
+}
+.fade{
+    background-color: #012340b6;
+}
+
+/*Formulário*/
+.conteudo-input {
+    margin-top: 10vh;
+}
+
+input,
+select, textarea{
+    border-color: #012340d0;
+    border-radius: 15px;
+}
+
+small {
+    color: #a61717;
+    visibility: hidden;
+}
+#valida-texto{
+    visibility: visible;
+}
+
+
+/*Botões*/
+.btn-azulNutri{
+    background-color: #012340;
+    color: #F3F3F3;
+}
+.btn-azulNutri:hover{
+    background-color: #17A697;
+}
+.close{
+    right: 20px;   
+}

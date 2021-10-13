@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { CadastroComponent } from './cadastro/cadastro.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
-
-import { CadastroComponent } from './cadastro/cadastro.component';
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -23,6 +22,7 @@ const routes: Routes = [
   {path:'cadastro',component:CadastroComponent},
   {path:'login',component:LoginComponent},
   {path: 'duvidas-frequentes', component: DuvidasFrequentesComponent}
+
 
 ];
 

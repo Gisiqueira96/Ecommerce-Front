@@ -1,43 +1,51 @@
-<nav class="navbar navbar-expand-lg bg-creme">
-    <a class="navbar-brand mr-10 txt-azulescuro" href="#"><img src="https://i.imgur.com/C6Ghz1v.png" alt="Logomarca NutriCommunity" width="200px"></a>
+<nav class="navbar navbar-expand-lg navbar-light bg-creme ">
+    <a class="navbar-brand  txt-azulescuro d-flex align-items-center" href="#"><img
+            src="../../assets/img/logo-nutri.svg" alt="Logomarca NutriCommunity">NUTRI <p>&nbsp;COMMUNITY</p></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        <ul class="navbar-nav ml-auto col-5 txt-azulescuro">
-            <li class="nav-item active pl-10">
-                <a class="nav-link txt-azulescuro" routerLink='/home'>HOME <span class="sr-only">(página atual)</span></a>
+        <ul class="col-5"></ul>
+        <ul class="navbar-nav col-5 txt-azulescuro justify-content-around align-items-center">
+            <li class="nav-item m-0">
+                <a class="nav-link txt-azulescuro" routerLink='/home'>HOME <span class="sr-only">(página
+                        atual)</span></a>
             </li>
-            <li class="nav-item pl-10">
-                <a class="nav-link txt-azulescuro" href='#ods'>SOBRE</a>
+            <li class="nav-item p-0">
+                <a class="nav-link txt-azulescuro" href="#ods">SOBRE</a>
             </li>
-            <li class="nav-item pl-10">
+            <li class="nav-item  p-0">
                 <a class="nav-link txt-azulescuro" routerLink='/ongs'>ONG's</a>
             </li>
-            <li class="nav-item pl-10">
-                <a class="nav-link txt-azulescuro" href='#equipe'>EQUIPE</a>
+            <li class="nav-item  p-0">
+                <a class="nav-link txt-azulescuro" href="#equipe">EQUIPE</a>
             </li>
-            <li class="nav-item pl-10">
+            <li class="nav-item  p-0">
                 <a class="nav-link txt-azulescuro" routerLink=''>DEPOIMENTOS</a>
             </li>
-            <li class="nav-item pl-10">
+            <li *ngIf="!authService.logado()" class="nav-item pl-10">
                 <a class="nav-link txt-azulescuro ponteiro" routerLink='/login'>LOGAR</a>
             </li>
 
 
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle txt-azulescuro" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    LOGAR
+            <li *ngIf="authService.logado()" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle txt-azulescuro" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{nome}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Entrar</a>
-                    <a class="dropdown-item" href="#">Outra ação</a>
+                    <a class="dropdown-item" href="#">Editar</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Algo mais aqui</a>
-                </div> -->
+                    <a class="dropdown-item" (click)='sair()'>Sair</a>
+                </div>
+            </li>
+            <li *ngIf="authService.logado()" class="cesta-compra d-flex justify-content-center">
+
+                <span class="dot d-flex justify-content-center align-items-center">+</span>
+                <img src="../../assets/cesta.svg" alt="cesta de compras" id="cesta">
+
+            </li>
         </ul>
     </div>
 </nav>

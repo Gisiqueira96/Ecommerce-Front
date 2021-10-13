@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/User';
@@ -13,7 +12,6 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
-    private router: Router
   ) { }
   entrar(userLogin:UserLogin):Observable<UserLogin>{
     return this.http.post<UserLogin>('https://nutricommunity.herokuapp.com/usuarios/logar', userLogin)
@@ -33,10 +31,11 @@ export class AuthService {
     return ok
   }
 
-  adm(){
+  adm() {
     let ok: boolean = false
 
-    if (environment.tipo == 'adm' ) {
+    if (environment.tipo == 'adm') {
+
       ok = true
     }
 
