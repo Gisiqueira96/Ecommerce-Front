@@ -3,24 +3,26 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card-columns">
-                <a *ngIf='authService.adm()' data-toggle="modal" data-target="#cadastroOng">
-                    <div class="card card-size mt-5">
-                        <img class="img-fluid card-img-top" src="../../assets/img/imagem_adicionar.jpg"
-                            alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5 class="card-title">Adicionar ONG</h5>
+                <div class="card card-size mt-5" *ngIf='authService.adm()'>
+                    <a  data-toggle="modal" data-target="#cadastroOng">
+                        <div>
+                            <img class="img-fluid card-img-top"  src="../../assets/img/imagem_adicionar.jpg"
+                                alt="Imagem de capa do card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Adicionar ONG</h5>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
                 <div class="card mt-5" *ngFor='let item of listaOngs'>
                     <div class="card-body">
                         <a [routerLink]="['/ongs/', item.id]" (click)="verificaLogin()">
-                            <img class="card-img-top mb-4" src="{{item.foto}}" alt="Imagem de capa do card">
+                            <img class="card-img-top mb-4 img-size" src="{{item.foto}}" alt="Imagem de capa do card">
                             <h5 class="card-title text-center">{{item.nomeOng}}</h5>
                             <p class="card-text text-center">{{item.localAtuacao}}</p>
                         </a>
 
-                        <div class="m-2 text-center">
+                        <div class="m-3 text-center">
                             <a *ngIf='authService.adm()' data-toggle="modal" data-target="#atualizaOng"
                                 (click)="findByIdOng(item.id)" class="mr-4 text-info">
                                 Atualizar
@@ -135,7 +137,7 @@
 <div class="modal fade" id="deleteOng" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+        <div class="modal-content d-flex">
             <div class="modal-header">
                 <h5 class="modal-title">Apagar ONG</h5>
                 <div class="modal-footer">

@@ -1,3 +1,7 @@
+.img-size {
+    height: 250px;
+}
+
 img{
     cursor: pointer;
 }
