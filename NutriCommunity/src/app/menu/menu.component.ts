@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { AuthService } from '../service/auth.service';
 
@@ -10,13 +10,16 @@ import { AuthService } from '../service/auth.service';
 })
 export class MenuComponent implements OnInit {
 nome = (environment.nome.toUpperCase().split(' ').slice(0, 1))
-
+homepage: boolean
   constructor(
     public authService: AuthService,
     private router: Router
+    
   ) { }
 
-  ngOnInit() {
+  ngOnInit(
+    
+  ) {
   }
   sair(){
     this.router.navigate(['/login'])
@@ -24,5 +27,14 @@ nome = (environment.nome.toUpperCase().split(' ').slice(0, 1))
     environment.nome = ''
     environment.id = 0
   }
+inicial(){
+ 
+  if(this.router.url == "/home"){
+    return this.homepage = true;
+  }
+  else{
+    return this.homepage = false;
+  }
 
+}
 }

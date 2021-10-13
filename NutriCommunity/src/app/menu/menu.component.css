@@ -6,7 +6,7 @@
     color: #012340;
     font-weight: bold;
 }
-.ponteiro{
+.ponteiro, .dropdown-item{
     cursor: pointer;
 }
 #cesta{
@@ -35,4 +35,38 @@ p{
 }
 a:hover{
 color: #17A697;
+ 
 }
+hr{
+    display: none;
+    margin:0;
+    visibility: hidden;
+}
+@media only screen and (max-width:1000px) {
+   li{
+       padding-bottom: 3px;
+   
+   }
+   ul{
+    margin-left:30%;
+    
+    text-align: center;
+   }
+   hr{
+    display:block;
+    visibility: visible;
+    width: 70vw;
+}
+li:hover{
+        background:linear-gradient(-90deg, #dbb48400 0%,#dbb48433 50%,#dbb48400 100% ); 
+    }
+ }
+
+
+ @media only screen and (max-width:350px) {
+    .navbar-brand{
+        font-size: 70%;
+    }
+    
+  }
+ 
