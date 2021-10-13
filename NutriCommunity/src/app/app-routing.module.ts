@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { OngsComponent } from './ongs/ongs.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { DuvidasFrequentesComponent } from './duvidas-frequentes/duvidas-frequentes.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'produtos', component:ProdutosComponent},
   {path:'cadastro',component:CadastroComponent},
   {path:'login',component:LoginComponent},
-  {path: 'duvidas-frequentes', component: DuvidasFrequentesComponent}
+  {path: 'duvidas-frequentes', component: DuvidasFrequentesComponent},
+  {path:'carrinho', component: CarrinhoComponent}
 
 
 ];

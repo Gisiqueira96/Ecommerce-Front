@@ -41,8 +41,10 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     ProdutosComponent,
 
     DuvidasFrequentesComponent,
+
     ProdutoEditComponent,
     ProdutoDeleteComponent
+
 
    
 
