@@ -33,7 +33,7 @@ ul.social-network li{
     cursor: pointer;
 }
 
-.fa-facebook-square{
+.fa-github-square{
    transition: all 1s;
     cursor: pointer;
 }
@@ -49,8 +49,8 @@ ul.social-network li{
     transform: rotateZ(360deg);
 }
 
-.fa-facebook-square:hover{
-    color: #3b5998;
+.fa-github-square:hover{
+    color: #17A697;
     -webkit-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
 }
@@ -60,3 +60,12 @@ ul.social-network li{
     -webkit-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
 }
+
+.pointer{
+    cursor: pointer;
+}
+
+.pointer:hover{
+    font-weight: 500;
+}
+

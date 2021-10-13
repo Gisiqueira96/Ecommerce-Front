@@ -26,6 +26,20 @@ h5{
     font-size:1vw;
 }
 
+.tipoFonte{
+    font-size: 40px;
+}
+
+.btn{
+    color: #17A697;
+    border: #F2D7B6 1px solid;
+}
+
+.btn:hover{
+    background-color: #17A697;
+    color: #F2D7B6;
+}
+
 .faca-parte {
     width: 95vw;
     height: 500px;
