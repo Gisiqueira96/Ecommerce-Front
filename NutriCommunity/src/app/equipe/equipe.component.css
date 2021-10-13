@@ -4,6 +4,7 @@
 
 h2{
     font-size: 50px;
+    color: #012340;
 }
 
 .equipeDescricaoE{
@@ -36,12 +37,15 @@ h2{
     position: relative;
     border: #17A697 4px solid;
     
+    
 }
 
 .equipeFotoD{
     z-index: 1000;
     position: relative;
     border: #17A697 4px solid;
+    
+
 }
 
 .integranteE{
@@ -126,12 +130,14 @@ hr{
         position: relative;
         border: #17A697 4px solid;
         
+        
     }
     
     .equipeFotoD{
         z-index: 1000;
         position: relative;
         border: #17A697 4px solid;
+        
     }
     
     .integranteE{
