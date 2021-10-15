@@ -1,9 +1,12 @@
 .bg-creme{
-    background-color: #FFEBD3;
+    background-color: var(--color-menu);
 }
 
 .txt-azulescuro{
-    color: #012340;
+    font-weight: bold;
+}
+.navbar-brand {
+    color: var(--color-font-brand);
     font-weight: bold;
 }
 .ponteiro, .dropdown-item{
@@ -16,8 +19,8 @@
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    background-color: rgb(22, 202, 184);
-    color: #012340;
+    background-color: var(--color-bolinha-carinho);
+    color: var(--color-menu);
     font-size: 20px;
     font-weight: bolder;
     display: block;
@@ -58,7 +61,7 @@ hr{
     width: 70vw;
 }
 li:hover{
-        background:linear-gradient(-90deg, #dbb48400 0%,#dbb48433 50%,#dbb48400 100% ); 
+        background:linear-gradient(-90deg, #dbb48400 0%,var(--color-bg-creme-escuro) 50%,#dbb48400 100% ); 
     }
  }
 
@@ -69,4 +72,44 @@ li:hover{
     }
     
   }
+  .ajusteAltura{
+    margin-top: 3px;
+  }
  
+  #switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+  #switch input {
+    display: none;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #7F7569;
+    border-radius: 30px;
+    transition: .4s;
+  }
+  .slider:before {
+    content:"";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .4s;
+  }
+  input:checked + .slider {
+    background: #808C96;
+  }
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }

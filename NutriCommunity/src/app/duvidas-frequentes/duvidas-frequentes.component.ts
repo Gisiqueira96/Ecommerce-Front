@@ -13,7 +13,7 @@ export class DuvidasFrequentesComponent implements OnInit {
   msgEmail: string
   msgTipo: string
   alertaTextAreaImg = "hidden"
-  alertaTextArea: string = "#012340"
+  alertaTextArea: string = "var(--color-font-titulo-login)"
 
   //validações dos inputs, text area e enviar
   nomeOk: boolean = false
@@ -90,12 +90,12 @@ export class DuvidasFrequentesComponent implements OnInit {
 
     let quantCaracteres = (300 - this.texto.length)
     this.textoLimite = String(quantCaracteres) + " caracteres restantes"
-    this.alertaTextArea = "#012340"
+    this.alertaTextArea = "var(--color-font-titulo-login)"
     this.alertaTextAreaImg = "hidden"
     if (quantCaracteres <= 0) {
       this.textoLimite = "Você ultrapassou o limite de caracteres!"
       this.alertaTextAreaImg = "visible"
-      this.alertaTextArea = "#a61717"
+      this.alertaTextArea = "var(--color-font-alertas-small)"
     }
   }
   enviar(){
@@ -118,7 +118,7 @@ export class DuvidasFrequentesComponent implements OnInit {
       if(!this.textoOk){
         this.textoLimite = "O conteúdo digitado não é válido!"
         this.alertaTextAreaImg = "visible"
-        this.alertaTextArea = "#a61717"
+        this.alertaTextArea = "var(--color-font-alertas-small)"
       }
     }
   }
