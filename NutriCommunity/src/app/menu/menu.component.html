@@ -1,19 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-creme ">
-    <a class="navbar-brand  txt-azulescuro d-flex align-items-center" href="#"><img
-            src="../../assets/img/logo-nutri.svg" alt="Logomarca NutriCommunity">NUTRI <p>&nbsp;COMMUNITY</p></a>
+<nav [ngClass]="{'navbar-light':!darkMode(), 'navbar-dark':darkMode()}" class="navbar navbar-expand-lg bg-creme"
+    id="menuNutri">
+    <a class="navbar-brand   d-flex align-items-center" href="#">
+        <img *ngIf="darkMode()" src="../../assets/img/logo-nutri-dark.svg" alt="Logomarca NutriCommunity"
+            id="logoNutri">
+        <img *ngIf="!darkMode()" src="../../assets/img/logo-nutri.svg" alt="Logomarca NutriCommunity"
+            id="logoNutri">NUTRI <p>&nbsp;COMMUNITY</p></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        <ul class="col-5"></ul>
+        <ul class="col-5 p-0 m-0">
+        </ul>
         <ul class="navbar-nav col-5 txt-azulescuro justify-content-around align-items-center">
-            
+
             <li class="nav-item p-0 " *ngIf="inicial()">
                 <a class="nav-link txt-azulescuro" href="#ods">SOBRE</a>
                 <hr>
             </li>
-            
+
             <li class="nav-item  p-0" *ngIf="inicial()">
                 <a class="nav-link txt-azulescuro" href="#equipe">EQUIPE</a>
                 <hr>
@@ -25,10 +30,10 @@
             <li class="nav-item m-0 p-0">
                 <a class="nav-link txt-azulescuro" routerLink='/home'>HOME <span class="sr-only">(página
                         atual)</span></a>
-                        <hr>
+                <hr>
             </li>
-            <li class="nav-item  p-0" >
-                <a class="nav-link txt-azulescuro"  routerLink='/ongs'>ONG's</a>
+            <li class="nav-item  p-0">
+                <a class="nav-link txt-azulescuro" routerLink='/ongs'>ONG's</a>
                 <hr>
             </li>
             <li *ngIf="!authService.logado()" class="nav-item pl-10">
@@ -43,15 +48,26 @@
                     {{nome}}
                 </a>
                 <div class="dropdown-menu mb-5" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item " (click)='sair()'>Sair</a>
+                    <a class="dropdown-item " (click)='sair()'>Sair</a>
                 </div>
             </li>
-            <li  *ngIf="authService.logado() && !authService.adm()" class="cesta-compra d-flex justify-content-center">
+            <li *ngIf="authService.logado() && !authService.adm()" class="cesta-compra d-flex justify-content-center">
 
                 <span class="dot d-flex justify-content-center align-items-center">+</span>
-                <img src="../../assets/cesta.svg" alt="cesta de compras" id="cesta">
+                <img *ngIf="!darkMode()" src="../../assets/img/cesta.svg" alt="cesta de compras" id="cesta">
+                <img *ngIf="darkMode()" src="../../assets/img/cesta-dark.svg" alt="cesta de compras" id="cesta">
 
             </li>
+            <div class="col-md-12 ajusteAltura">
+            
+                <label id="switch" class="m-0 p-0">
+                    <input *ngIf="darkMode()" type="checkbox" id="switchDark" checked (click)="changeMode()">
+                    <input *ngIf="!darkMode()" type="checkbox" id="switchDark" (click)="changeMode()">
+                    <span class="slider"></span>
+                </label>
+
+            
+        </div>
         </ul>
     </div>
 </nav>
