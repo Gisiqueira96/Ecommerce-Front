@@ -6,7 +6,7 @@
 }
 
 .container-fluid {
-    background: linear-gradient(0deg, #5299d3 0%, #012340 100%);
+    background-color:var(--color-bg-login);
     background-size: cover;
 }
 
@@ -17,7 +17,7 @@
     box-sizing: border-box;
     width: 70vw;
     height: 100vh;
-    background-color: #F3F3F3;
+    background-color: var(--color-bg-branco);
     position: relative;
 }
 
@@ -44,21 +44,17 @@
 
 input,
 select {
-    border-color: #012340d0;
+    border-color: var(--color-border-input);
     border-radius: 15px;
 }
 
 h1 {
     font-weight: bold;
-    color: #012340;
-}
-
-label {
-    color: #012340;
+    color: var(--color-font-titulo-login);
 }
 
 small {
-    color: #a61717;
+    color: var(--color-font-alertas-small);
     visibility: hidden;
 }
 
@@ -66,18 +62,27 @@ option {
     border-radius: 30px;
 }
 
-input:focus {
+input:focus, select:focus {
     outline: none !important;
-    border:1px solid #17A697;
-    box-shadow: 0 0 10px #17A697;
+    border:1px solid var(--color-border-input);
+    box-shadow: 0 0 2px var(--color-border-input);
+    color: var(--color-font-black);
 }
-
-select:focus {
-    outline: none !important;
-    border:1px solid #17A697;
-    box-shadow: 0 0 10px #17A697;
+input::content, select::content{
+    background-color: var(--color-bg-branco)!important;
+    color: var(--color-font-black);
 }
-
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px var(--color-bg-input-autocomplete) inset;
+}
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--color-font-black) !important;
+}
+input::placeholder{
+    color: var(--color-font-placeholder);
+}
 
 /*Formatações dos botões*/
 

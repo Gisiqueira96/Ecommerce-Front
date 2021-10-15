@@ -5,7 +5,7 @@
  
 }
 .bg-branco-nutry{
-    background-color: #F3F3F3;
+    background-color: var(--color-bg-branco);
 }
 
 a {
@@ -13,9 +13,12 @@ a {
 }
 
 .txt-verde {
-    color: #17A697;
+    color: var(--color-font-titulo-ods);
 }
 
 h1{
     font-size: 50px;
+}
+h5{
+    color: var(--color-font-texto);
 }

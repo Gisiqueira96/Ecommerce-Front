@@ -5,7 +5,7 @@
 
 /*Fundo do modal e da tela*/
 .modal-content {
-    background: linear-gradient(-180deg,#f3f3f300 10%,#F3F3F3 10%);
+    background: linear-gradient(-180deg,#f3f3f300 10%,var(--color-bg-branco) 10%);
     border-radius: 0px 0px 20px 20px;
     position: relative;
     border:none;
@@ -13,7 +13,10 @@
 .fade{
     background-color: #012340b6;
 }
-
+/*Título*/
+h1{
+    color:var(--color-font-titulo-login);
+}
 /*Formulário*/
 .conteudo-input {
     margin-top: 10vh;
@@ -21,16 +24,38 @@
 
 input,
 select, textarea{
-    border-color: #012340d0;
+    border-color: var(--color-border-input);
     border-radius: 15px;
 }
 
 small {
-    color: #a61717;
+    color: var(--color-font-alertas-small);
     visibility: hidden;
 }
 #valida-texto{
     visibility: visible;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none !important;
+    border:1px solid var(--color-border-input);
+    box-shadow: 0 0 2px var(--color-border-input);
+    color: var(--color-font-black);
+}
+input::content, select::content, textarea::content{
+    background-color: var(--color-bg-branco)!important;
+    color: var(--color-font-black);
+}
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px var(--color-bg-input-autocomplete) inset;
+}
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--color-font-black) !important;
+}
+input::placeholder, textarea::placeholder{
+    color: var(--color-font-placeholder);
 }
 
 
@@ -43,5 +68,6 @@ small {
     background-color: #17A697;
 }
 .close{
+    color: var(--color-font-black);
     right: 20px;   
 }

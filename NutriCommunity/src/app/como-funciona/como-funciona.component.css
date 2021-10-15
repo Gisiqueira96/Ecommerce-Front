@@ -1,7 +1,7 @@
 .bg-dividido-oposto {
     width: 100%;
     height: 700px;
-    background: linear-gradient(30deg, #17A697 50%,#012340 50%);
+    background: linear-gradient(30deg, var(--color-bg-como-funciona) 50%,#012340 50%);
 }
 .dot {
     height: 45px;

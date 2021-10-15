@@ -28,3 +28,46 @@ html,body
     font-family: 'Bebas Neue' ,'Franklin Gothic Medium', Arial, sans-serif;
 }
 
+:root{
+    --color-menu: #FFEBD3;
+    --color-bg-como-funciona: #17A697;
+    --color-bg-input:#F3F3F3;
+    --color-bg-input-autocomplete:#f7feff;
+    --color-bg-creme-escuro:#f5ce9e;
+    --color-bg-branco:#F3F3F3;
+    --color-bg-login:#194469;
+    --color-bolinha-carinho:#7F7569;
+    
+    --color-border-input:#012340;
+
+    --color-font-alertas-small:#a61717;
+    --color-font-brand:#012340;
+    --color-font-creme: #FFEBD3;
+    --color-font-black:#1b1b1b;
+    --color-font-titulo-login:#012340;
+    --color-font-texto:#012340;
+    --color-font-titulo-ods:#17A697;
+    --color-font-placeholder:#2f2f2fc4;
+}
+.dark-mode:root{
+    --color-bg-como-funciona: #0b393f;
+    --color-menu: #00182C;
+    --color-bg-creme-escuro:#012340;
+    --color-bg-verde: #16353a;
+    --color-bg-branco:#2a3541;
+    --color-bg-input:#2a3541;
+    --color-bg-input-autocomplete:#3a4a5a;
+    --color-bg-login:#012340;
+    --color-bolinha-carinho:#808C96;
+
+    --color-border-input:#25caba;
+
+    --color-font-brand:#FFEBD3;
+    --color-font-creme: #FFEBD3;
+    --color-font-titulo-login:#25caba;
+    --color-font-titulo-ods:#25caba;
+    --color-font-alertas-small:#ee7b7b;
+    --color-font-black:#F3F3F3;
+    --color-font-texto:#F3F3F3;
+    --color-font-placeholder:#17a698c4;
+}
