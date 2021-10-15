@@ -29,7 +29,8 @@
       <button *ngIf='authService.adm()' type="button" class="btn btn-verdenutri" (click)='postProduto()'>Publicar</button>
     </div>
   </div>
-
+<hr *ngIf='authService.adm()'>
+<h3 *ngIf='authService.adm()'>Produtos Cadastrados:</h3>
   <div class="row d-flex justify-content-center mt-3 mb-4">
     <div class="card-deck">
       <div class="card" *ngFor='let item of ong.produto'>
@@ -40,9 +41,9 @@
           <p class="card-text text-center">Estoque: {{item.estoque}} &nbsp; | &nbsp; R$ {{item.valor}}</p>
         </div>
         <div class="mb-3 ml-3 d-flex justify-content-center">
-          <button *ngIf='authService.adm()' class="btn btn-info mr-4 cursor" [routerLink]="['/produto-edit', item.id]">Atualizar</button>
+          <button *ngIf='authService.adm()' class="btn btn-verdenutri mr-4 cursor" [routerLink]="['/produto-edit', item.id]">Atualizar</button>
           <button *ngIf='authService.adm()' class="btn btn-danger mr-4 cursor" [routerLink]="['/produto-delete', item.id]">Deletar</button>
-          <button *ngIf='!authService.adm()' class="btn btn-success cursor" data-toggle='modal' data-target="#adicionaCarrinho" (click)='findByIdProduto(item.id)' >Adicionar ao carrinho</button><!--Nessa linha vai o link pro carrinho-->
+          <button *ngIf='!authService.adm()' class="btn btn-verdenutri cursor" data-toggle='modal' data-target="#adicionaCarrinho" (click)='findByIdProduto(item.id)' >Adicionar ao carrinho</button><!--Nessa linha vai o link pro carrinho-->
         </div>
       </div>
     </div>
@@ -74,7 +75,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-             <button id="adicionaCarrinhoBotao" type="button" class="btn btn-verde-nutri" (click)='alterarEstoque()'>Adicionar ao carrinho</button>
+             <button id="adicionaCarrinhoBotao" type="button" class="btn btn-verdenutri" (click)='alterarEstoque()'>Adicionar ao carrinho</button>
             </div>
         </div>
     </div>

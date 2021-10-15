@@ -5,9 +5,9 @@
 img{
     cursor: pointer;
 }
-a{
+a, h5{
     text-decoration: none;
-    color: black;
+    color: var(--color-font-black);
 }
 
 .pointer{
@@ -16,13 +16,17 @@ a{
 }
 
 .card{
-
+    background-color: var(--color-bg-cards);
     border-radius: 20px;
-    border: groove 8px #17A697 ;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.164) ;
+    
 }
 
 .bg-verdeProjeto{
-    background-color: #17A697;
+    background-color: var(--color-btn-verde);
+}
+.bg-verdeProjeto:hover{
+    background-color: var(--color-btn-verde-hover);
 }
 
 .border-foto{
@@ -30,15 +34,54 @@ a{
     
 }
 
-input:focus {
-    outline: none !important;
-    border:1px solid #17A697;
-    box-shadow: 0 0 10px #17A697;
+
+.modal-content{
+    background-color: var(--color-bg-branco);
+    color:var(--color-font-black);
+}
+hr{
+    background-color: var(--color-border-input-modal);;
+}
+input,
+select {
+    border-color: var(--color-border-input-modal);
+    border-radius: 15px;
 }
 
-select:focus {
-    outline: none !important;
-    border:1px solid #17A697;
-    box-shadow: 0 0 10px #17A697;
+h1 {
+    font-weight: bold;
+    color: var(--color-font-titulo-login);
 }
+
+small {
+    color: var(--color-font-alertas-small);
+    visibility: hidden;
+}
+
+option {
+    border-radius: 30px;
+}
+
+input:focus, select:focus {
+    outline: none !important;
+    border:1px solid var(--color-border-input);
+    box-shadow: 0 0 2px var(--color-border-input);
+    color: var(--color-font-black);
+}
+input::content, select::content{
+    background-color: var(--color-bg-branco)!important;
+    color: var(--color-font-black);
+}
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px var(--color-bg-input-autocomplete) inset;
+}
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--color-font-black) !important;
+}
+input::placeholder{
+    color: var(--color-font-placeholder);
+}
+
 

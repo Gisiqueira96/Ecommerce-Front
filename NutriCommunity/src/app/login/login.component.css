@@ -108,7 +108,7 @@ input::placeholder{
 }
 
 .btn-verdenutri:hover {
-    background-color: #012340;
+    background-color: var(--color-btn-verde-hover);
 }
 
 .btn-verdenutri-line:hover {
@@ -134,7 +134,7 @@ input::placeholder{
         margin-left: 100;
         margin-right: auto;
         padding: 0px;
-        background-color: #376D9A;
+        background-color: var(--color-bg-login);
         z-index: -1;
     }
     .img-login {
@@ -149,7 +149,7 @@ input::placeholder{
     .box-form {
         box-sizing: border-box;
         width: 100vw;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border-radius: 0px;
         position: relative;
         padding: 0px;

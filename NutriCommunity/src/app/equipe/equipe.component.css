@@ -1,16 +1,22 @@
 .txt-azulescuro{
-    color: #012340;
+    color: var(--color-font-titulo-equipe);
 }
 
 h2{
     font-size: 50px;
-    color: #012340;
 }
+p{
+    color: var(--color-font-black);
+}
+.redeSocial{
+    filter: invert(var(--icon));
+}
+
 
 .equipeDescricaoE{
     width: 450px;
     height: 130px;
-    background-color: #F3F3F3;
+    background-color: var(--color-bg-branco);
     border: #17A697 1px solid ;
     margin-top: 25px;
     margin-left:-30px;
@@ -22,7 +28,7 @@ h2{
 .equipeDescricaoD{
     width: 450px;
     height: 130px;
-    background-color: #F3F3F3;
+    background-color: var(--color-bg-branco);
     border: #17A697 1px solid ;
     margin-top: 25px;
     margin-right:-80px;
@@ -103,7 +109,7 @@ hr{
     .equipeDescricaoE{
         width: 350px;
         height: 130px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-left:-30px;
@@ -115,7 +121,7 @@ hr{
     .equipeDescricaoD{
         width: 350px;
         height: 130px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-right:-80px;
@@ -196,7 +202,7 @@ hr{
     .equipeDescricaoE{
         width: 280px;
         height: 130px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-left:-30px;
@@ -208,7 +214,7 @@ hr{
     .equipeDescricaoD{
         width: 280px;
         height: 130px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-right:-80px;
@@ -285,7 +291,7 @@ hr{
     .equipeDescricaoE{
         width: 280px;
         height: 130px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-left:-30px;
@@ -297,7 +303,7 @@ hr{
     .equipeDescricaoD{
         width: 280px;
         height: 130px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-right:-80px;
@@ -377,7 +383,7 @@ hr{
     .equipeDescricaoE{
         width: 280px;
         height: 130px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-left:-30px;
@@ -389,7 +395,7 @@ hr{
     .equipeDescricaoD{
         width: 280px;
         height: 130px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-right:-80px;
@@ -469,7 +475,7 @@ hr{
     .equipeDescricaoE{
         width: 280px;
         height: 100px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-left:-30px;
@@ -482,7 +488,7 @@ hr{
     .equipeDescricaoD{
         width: 280px;
         height: 100px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-right:-80px;
@@ -566,7 +572,7 @@ hr{
     .equipeDescricaoE{
         width: 230px;
         height: 100px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-left:-30px;
@@ -579,7 +585,7 @@ hr{
     .equipeDescricaoD{
         width: 230px;
         height: 100px;
-        background-color: #F3F3F3;
+        background-color: var(--color-bg-branco);
         border: #17A697 1px solid ;
         margin-top: 25px;
         margin-right:-80px;

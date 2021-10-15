@@ -73,14 +73,14 @@
                     <select class="form-control" name="tipo" id="tipo" [(ngModel)]='tipoOng'>
                         <option value="">Selecione o tipo de ONG</option>
                         <option value="associacao">Associação</option>
-                        <option value="funsacao">Fundação</option>
+                        <option value="fundacao">Fundação</option>
                         <option value="instituicao">Instituição</option>
                     </select>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success" (click)='postOng()' data-dismiss="modal">Publicar</button>
+                <button type="button" class="btn bg-verdeProjeto text-white" (click)='postOng()' data-dismiss="modal">Publicar</button>
             </div>
         </div>
     </div>
@@ -132,13 +132,14 @@
     </div>
 </div>
 
-<!-- Modal Cadastra Ong-->
+<!-- Modal Deleta Ong-->
 <div class="modal fade" id="deleteOng" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content d-flex">
+            <h4 class="modal-title tipoFonte mt-3 ml-3">Apagar ONG</h4>
             <div class="modal-header">
-                <h4 class="modal-title tipoFonte">Apagar ONG</h4>
+                
                 <div class="modal-footer">
                     <label for="titulo">Você deseja mesmo apagar a ong {{ong.nomeOng}}? Todos os produtos relacionados
                         serão igualmente apagados. </label>

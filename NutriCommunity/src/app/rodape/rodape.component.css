@@ -2,7 +2,7 @@
     background-color: var(--color-menu);
 }
 
-.estilo-link, copyright{
+.estilo-link, copyright, p{
     text-decoration: none;
     color: var(--color-font-black);
 }
@@ -10,7 +10,9 @@
     color: #17A697;
 
 }
-
+.faleConosco{
+    filter: invert(var(--icon))
+}
 ul.social-network{
     list-style: none;
     padding: 0;

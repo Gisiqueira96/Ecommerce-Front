@@ -37,8 +37,12 @@ html,body
     --color-bg-branco:#F3F3F3;
     --color-bg-login:#194469;
     --color-bolinha-carinho:#7F7569;
+    --color-bg-cards:#f6f6f6;
+
+    --icon: 0;
     
     --color-border-input:#012340;
+    --color-border-input-modal:#cacaca;
 
     --color-font-alertas-small:#a61717;
     --color-font-brand:#012340;
@@ -48,19 +52,37 @@ html,body
     --color-font-texto:#012340;
     --color-font-titulo-ods:#17A697;
     --color-font-placeholder:#2f2f2fc4;
+    --color-font-titulo-equipe:#012340;
+    --color-font-titulo-delete-edit:#012340;
+
+    --color-btn-verde: #17A697;
+    --color-btn-verde-hover:#117a70;
+    --color-btn-azul: #012340;
+    --color-btn-azul-hover:#001629;
+    
+    --color-hr: #2f2f2f7a;
+
+    --color-fade:#012340b6;
 }
 .dark-mode:root{
     --color-bg-como-funciona: #0b393f;
     --color-menu: #00182C;
     --color-bg-creme-escuro:#012340;
     --color-bg-verde: #16353a;
-    --color-bg-branco:#2a3541;
+    --color-bg-branco:#222b35;
     --color-bg-input:#2a3541;
     --color-bg-input-autocomplete:#3a4a5a;
     --color-bg-login:#012340;
     --color-bolinha-carinho:#808C96;
+    --color-bg-cards:#28323f;
+
+    --icon: 90;
 
     --color-border-input:#25caba;
+    --color-border-input-modal:#25caba;
+
+    --color-btn-azul: #004a8b;
+    --color-btn-azul-hover:#012442;
 
     --color-font-brand:#FFEBD3;
     --color-font-creme: #FFEBD3;
@@ -70,4 +92,14 @@ html,body
     --color-font-black:#F3F3F3;
     --color-font-texto:#F3F3F3;
     --color-font-placeholder:#17a698c4;
+    --color-font-titulo-equipe:#25caba;
+    --color-font-titulo-delete-edit:#25caba;
+
+    --color-hr: #25caba;
+    --color-fade:#010b14b6;
 }
+
+
+    body { 
+        background-color: var(--color-bg-branco)!important;  
+    }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     public authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit() {
@@ -62,7 +64,7 @@ export class LoginComponent implements OnInit {
     }, erro => {
       //Quando os dados inseridos não condizem com o que está cadastrado no banco de dados
       if (erro.status == 500) {
-        alert('Email ou senha estão incorretos!')
+        this.alerta.showAlertDanger('Email ou senha estão incorretos!')
       }
     })
   }
