@@ -2,9 +2,11 @@ img{
     border-radius: 20px 0px 0px 20px;
     min-width: 60%;
 }
-
+h3{
+color:var(--color-font-titulo-delete-edit);
+}
 .txt-azulescuro{
-    color: #012340;
+    color: var(--color-font-titulo-equipe);
     font-weight: bold;
 }
 
@@ -21,5 +23,4 @@ img{
 .btn-verdenutri:hover {
     background-color: #012340;
 }
-
 

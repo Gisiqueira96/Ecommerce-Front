@@ -1,3 +1,13 @@
+h1,h3{
+    color:var(--color-font-titulo-delete-edit);
+    }
+label{
+    color: var(--color-font-black);
+}
+hr{
+    background-color: var(--color-hr);
+}
+
 .img-size {
     height: 300px;
 }
@@ -10,22 +20,58 @@ small {
     visibility: hidden;
 }
 .btn-verdenutri {
-    background-color: #17A697;
+    background-color: var(--color-btn-verde);
     color: #F3F3F3;
 }
 
 .btn-verdenutri:hover {
-    background-color: #012340;
+    background-color: var(--color-btn-verde-hover);
 }
 
-input:focus {
-    outline: none !important;
-    border:1px solid #17A697;
-    box-shadow: 0 0 10px #17A697;
+
+
+/*Formatações do input*/
+
+.conteudo-input {
+    margin-top: 10vh;
 }
 
-select:focus {
+input,
+select {
+    border-color: var(--color-border-input);
+    border-radius: 15px;
+}
+
+option {
+    border-radius: 30px;
+}
+
+input:focus, select:focus {
     outline: none !important;
-    border:1px solid #17A697;
-    box-shadow: 0 0 10px #17A697;
+    border:1px solid var(--color-border-input);
+    box-shadow: 0 0 2px var(--color-border-input);
+    color: var(--color-font-black);
+}
+input::content, select::content{
+    background-color: var(--color-bg-branco)!important;
+    color: var(--color-font-black);
+}
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px var(--color-bg-input-autocomplete) inset;
+}
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--color-font-black) !important;
+}
+input::placeholder{
+    color: var(--color-font-placeholder);
+}
+
+/*Card*/
+.card{
+    background-color: var(--color-bg-cards);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.164) ;
+    color: var(--color-font-black);
 }

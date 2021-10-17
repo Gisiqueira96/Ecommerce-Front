@@ -10,8 +10,11 @@
     position: relative;
     border:none;
 }
+hr{
+    background-color: var(--color-hr);
+}
 .fade{
-    background-color: #012340b6;
+    background-color: var(--color-fade);
 }
 /*Título*/
 h1{
@@ -61,11 +64,11 @@ input::placeholder, textarea::placeholder{
 
 /*Botões*/
 .btn-azulNutri{
-    background-color: #012340;
+    background-color: var(--color-btn-azul);
     color: #F3F3F3;
 }
 .btn-azulNutri:hover{
-    background-color: #17A697;
+    background-color:var(--color-btn-azul-hover);
 }
 .close{
     color: var(--color-font-black);
