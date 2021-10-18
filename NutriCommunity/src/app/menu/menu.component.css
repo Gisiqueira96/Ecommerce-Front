@@ -16,6 +16,24 @@
     height: 30px;
     
 }
+
+/*Botão sair */
+.dropdown-menu{
+  background-color: #17A697;
+}
+.dropdown-item{
+  background-color: #17A697;
+  font-weight: bold;
+  color: white;
+}
+
+.dropdown-item:hover{
+  background-color: #17A697;
+  font-weight: bold;
+  color: black;
+}
+/* Acaba Botão sair */
+
 .dot{
     height: 15px;
     width: 15px;

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { OngsService } from '../service/ongs.service';
 import { ProdutosService } from '../service/produtos.service';
@@ -26,12 +27,17 @@ export class ProdutosComponent implements OnInit {
   msgEstoque: string
   estoqueOk = false
   valorInput: number = 1
+
+  listaProduto: Produto[]
+
+
   constructor(
     private route: ActivatedRoute,
     private produtosService: ProdutosService,
     private ongService: OngsService,
     public authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit() {
@@ -47,6 +53,7 @@ export class ProdutosComponent implements OnInit {
       this.ong = resp
     })
   }
+
   postProduto() {
     this.produto.nomeProduto = this.nome
     this.produto.foto = this.imagem
@@ -56,7 +63,9 @@ export class ProdutosComponent implements OnInit {
     this.produto.categoria = this.ong
     this.produtosService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
-      alert('Produto adicionado com sucesso!')
+      this.alerta.showAlertSuccess('Produto adicionado com sucesso!')
+      this.getOngById(this.idOng)
+      
     })
   }
 
@@ -70,6 +79,7 @@ export class ProdutosComponent implements OnInit {
     })
 
   }
+
   limpaErroEstoque() {
     this.msgEstoque = "hidden"
   }
@@ -102,6 +112,7 @@ alterarEstoque(){
     this.getOngById(this.idOng)
     this.estoqueOk = false
     this.limpaInput()
+    this.alerta.showAlertSuccess('Adicionado ao carrinho com sucesso')
   } else {
     this.msgEstoque = "visible"
   }

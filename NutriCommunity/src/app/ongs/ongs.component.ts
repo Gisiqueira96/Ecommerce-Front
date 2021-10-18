@@ -58,7 +58,7 @@ export class OngsComponent implements OnInit {
     this.ongsService.postOngs(this.ong).subscribe((resp: Categoria)=>{
       this.ong = resp
 
-      alert ('ONG Adicionada com sucesso!')
+       this.alertas.showAlertSuccess('ONG Adicionada com sucesso!')
       this.getAllOng()
     })
 

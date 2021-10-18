@@ -24,8 +24,9 @@
         <label for="texto">Valor</label>
         <input [(ngModel)]='preco' type="text" class="form-control" id="imagem" placeholder="Digite o valor do produto">
       </div>
+    
 
-      <button *ngIf='authService.adm()' type="button" class="btn btn-danger mr-3">Cancelar</button>
+      <button *ngIf='authService.adm()' type="button" class="btn btn-danger mr-3" routerLink='/ongs'>Cancelar</button>
       <button *ngIf='authService.adm()' type="button" class="btn btn-verdenutri" (click)='postProduto()'>Publicar</button>
     </div>
   </div>

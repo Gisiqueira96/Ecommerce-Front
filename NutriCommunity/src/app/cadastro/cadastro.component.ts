@@ -121,7 +121,7 @@ export class CadastroComponent implements OnInit {
     if (this.nomeOk && this.senhaOk && this.emailOk && this.confirmaOk && this.tipoOk) {
       this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
-        this.router.navigate(['/home'])
+        this.router.navigate(['/login'])
         this.alerta.showAlertSuccess('Usuário cadastrado com sucesso!')
       }, erro =>{
         //caso ocorra conflito (e-mail já cadastrado no banco de dados)
