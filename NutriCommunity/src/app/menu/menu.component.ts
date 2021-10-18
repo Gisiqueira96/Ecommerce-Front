@@ -11,6 +11,7 @@ import { AuthService } from '../service/auth.service';
 export class MenuComponent implements OnInit {
   nome = (environment.nome.toUpperCase().split(' ').slice(0, 1))
   homepage: boolean
+  addCarrinho = "+"
 
   constructor(
     public authService: AuthService,
@@ -35,9 +36,12 @@ export class MenuComponent implements OnInit {
     else {
       return this.homepage = false;
     }
-
-
   }
+
+  adicionaCarrinho(produtoTotalCarrinho: string){
+  this.addCarrinho = produtoTotalCarrinho
+  }
+  
   darkMode() {
     const mode = document.querySelector('html')
     if (mode?.classList.value == 'dark-mode') {

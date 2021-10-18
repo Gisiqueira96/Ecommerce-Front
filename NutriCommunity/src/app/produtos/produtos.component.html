@@ -58,7 +58,7 @@
         <div class="modal-content"  >
           <div class="modal-header"  >
                 <h2 class="modal-title" id="TituloOng">Adicionar ao carrinho</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" (click)="limpaInput()">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -68,7 +68,7 @@
                 </div>
                 <div class="form-group">
                     <label for="texto">Quantidade desejada</label>
-                    <input (change)='leQuantidade($event)' [value]="valorInput" type="number" min="1" max="produto.estoque" class="form-control" id="leQuantidade"
+                    <input (change)='leQuantidade($event)' type="number" min="1" max="produto.estoque" class="form-control" id="leQuantidade"
                         placeholder="Digite a quantidade desejada (max: {{produto.estoque}})" (click)='limpaErroEstoque()'>
                         <small id="valida-estoque" [style.visibility]="msgEstoque"> <img src="../../assets/img/alertSign.svg"
                           height="15px" class="pb-1" alt="alerta"> Selecione uma quantidade de estoque disponível</small>

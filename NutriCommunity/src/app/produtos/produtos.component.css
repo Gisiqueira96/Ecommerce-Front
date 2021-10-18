@@ -1,4 +1,4 @@
-h1,h3{
+h1,h2,h3,h5{
     color:var(--color-font-titulo-delete-edit);
     }
 label{
@@ -12,12 +12,15 @@ hr{
     height: 300px;
     border-radius: 20px 20px 0 0;
 }
+.modal-content{
+    background-color: var(--color-bg-branco);
+}
 
 .cursor {
     cursor: pointer;
 }
 small {
-    color: #a61717;
+    color: var(--color-font-alertas-small);
     visibility: hidden;
 }
 .btn-verdenutri {

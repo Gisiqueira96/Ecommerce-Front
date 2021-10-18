@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
@@ -7,6 +7,7 @@ import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { OngsService } from '../service/ongs.service';
 import { ProdutosService } from '../service/produtos.service';
+
 
 @Component({
   selector: 'app-produtos',
@@ -17,6 +18,7 @@ export class ProdutosComponent implements OnInit {
   ong: Categoria = new Categoria()
   produto: Produto = new Produto()
 
+ 
   nome: string
   descricaoProduto: string
   imagem: string
@@ -26,10 +28,9 @@ export class ProdutosComponent implements OnInit {
   idOng: number
   msgEstoque: string
   estoqueOk = false
-  valorInput: number = 1
+  produtoTotalCarrinho = "+"
 
   listaProduto: Produto[]
-
 
   constructor(
     private route: ActivatedRoute,
@@ -44,7 +45,7 @@ export class ProdutosComponent implements OnInit {
     window.scroll(0, 0)
     this.idOng = this.route.snapshot.params['id']
     this.getOngById(this.idOng)
-    if(environment.token == ''){
+    if (environment.token == '') {
       this.router.navigate(['/home'])
     }
   }
@@ -65,7 +66,7 @@ export class ProdutosComponent implements OnInit {
       this.produto = resp
       this.alerta.showAlertSuccess('Produto adicionado com sucesso!')
       this.getOngById(this.idOng)
-      
+
     })
   }
 
@@ -95,30 +96,32 @@ export class ProdutosComponent implements OnInit {
       return this.quantidadeProduto = event.target.value
     }
   }
-  limpaInput() {
   
-  this.valorInput = 1
-}
-alterarEstoque(){
+  alterarEstoque() {
+    let somaCarrinho = 0
+    somaCarrinho += this.quantidadeProduto
+    if (somaCarrinho != 0) {
+      this.produtoTotalCarrinho = somaCarrinho.toString()
+     
+    }
+    if (this.estoqueOk && this.produto.estoque - this.quantidadeProduto >= 0) {
 
-  if (this.estoqueOk) {
+      this.produto.estoque -= this.quantidadeProduto
+      this.produtosService.putProduto(this.produto).subscribe((resp: Produto) => {
+        this.getOngById(this.idOng)
+        return this.produto = resp
+      })
+      
+      const botaoAdicionarCarrinho = document.getElementById("adicionaCarrinhoBotao")
+      botaoAdicionarCarrinho?.setAttribute("data-dismiss", "modal")
+      this.alerta.showAlertSuccess('Adicionado ao carrinho com sucesso')
+      
+    } else {
+      this.msgEstoque = "visible"
+    }
 
-    this.produto.estoque -= this.quantidadeProduto
-    this.produtosService.putProduto(this.produto).subscribe((resp: Produto) => {
-      return this.produto = resp
-    })
-    const botaoAdicionarCarrinho = document.getElementById("adicionaCarrinhoBotao")
-    botaoAdicionarCarrinho?.setAttribute("data-dismiss", "modal")
-    this.getOngById(this.idOng)
-    this.estoqueOk = false
-    this.limpaInput()
-    this.alerta.showAlertSuccess('Adicionado ao carrinho com sucesso')
-  } else {
-    this.msgEstoque = "visible"
+
   }
-
-
-}
 }
 
 

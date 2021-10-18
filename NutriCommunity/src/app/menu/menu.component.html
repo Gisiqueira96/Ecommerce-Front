@@ -53,7 +53,7 @@
             </li>
             <li *ngIf="authService.logado() && !authService.adm()" class="cesta-compra d-flex justify-content-center">
 
-                <span class="dot d-flex justify-content-center align-items-center">+</span>
+                <span class="dot d-flex justify-content-center align-items-center" id="addCarrinho" [innerHTML]="addCarrinho"></span>
                 <img *ngIf="!darkMode()" src="../../assets/img/cesta.svg" alt="cesta de compras" id="cesta">
                 <img *ngIf="darkMode()" src="../../assets/img/cesta-dark.svg" alt="cesta de compras" id="cesta">
 
