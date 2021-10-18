@@ -1,0 +1,1032 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>nutri-community documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">nutri-community documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  LoginComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/login/login.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-login</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./login.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./login.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#authService" >authService</a>
+                            </li>
+                            <li>
+                                <a href="#msgEmail" >msgEmail</a>
+                            </li>
+                            <li>
+                                <a href="#msgSenha" >msgSenha</a>
+                            </li>
+                            <li>
+                                <a href="#userLogin" >userLogin</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#limpaErroEmail" >limpaErroEmail</a>
+                            </li>
+                            <li>
+                                <a href="#limpaErroSenha" >limpaErroSenha</a>
+                            </li>
+                            <li>
+                                <a href="#logar" >logar</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#validaEmail" >validaEmail</a>
+                            </li>
+                            <li>
+                                <a href="#validaSenha" >validaSenha</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, alerta: <a href="../injectables/AlertasService.html" target="_self">AlertasService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/login/login.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alerta</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AlertasService.html" target="_self" >AlertasService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="limpaErroEmail"></a>
+                    <span class="name">
+                        <span ><b>limpaErroEmail</b></span>
+                        <a href="#limpaErroEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>limpaErroEmail()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/login/login.component.ts:33</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="limpaErroSenha"></a>
+                    <span class="name">
+                        <span ><b>limpaErroSenha</b></span>
+                        <a href="#limpaErroSenha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>limpaErroSenha()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/login/login.component.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logar"></a>
+                    <span class="name">
+                        <span ><b>logar</b></span>
+                        <a href="#logar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>logar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/login/login.component.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/login/login.component.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validaEmail"></a>
+                    <span class="name">
+                        <span ><b>validaEmail</b></span>
+                        <a href="#validaEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validaEmail()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/login/login.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>&quot;hidden&quot; | &quot;visible&quot;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validaSenha"></a>
+                    <span class="name">
+                        <span ><b>validaSenha</b></span>
+                        <a href="#validaSenha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validaSenha()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/login/login.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>&quot;hidden&quot; | &quot;visible&quot;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>authService</b></span>
+                        <a href="#authService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/login/login.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="msgEmail"></a>
+                    <span class="name">
+                        <span ><b>msgEmail</b></span>
+                        <a href="#msgEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/login/login.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="msgSenha"></a>
+                    <span class="name">
+                        <span ><b>msgSenha</b></span>
+                        <a href="#msgSenha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/login/login.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userLogin"></a>
+                    <span class="name">
+                        <span ><b>userLogin</b></span>
+                        <a href="#userLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/UserLogin.html" target="_self" >UserLogin</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new UserLogin()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/login/login.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { environment } from &#x27;src/environments/environment.prod&#x27;;
+import { UserLogin } from &#x27;../model/UserLogin&#x27;;
+import { AlertasService } from &#x27;../service/alertas.service&#x27;;
+import { AuthService } from &#x27;../service/auth.service&#x27;;
+
+@Component({
+  selector: &#x27;app-login&#x27;,
+  templateUrl: &#x27;./login.component.html&#x27;,
+  styleUrls: [&#x27;./login.component.css&#x27;]
+})
+export class LoginComponent implements OnInit {
+
+  //variável para auxiliar o consumo
+  userLogin: UserLogin &#x3D; new UserLogin()
+
+
+  //variáveis para as mensagens de alerta nos inputs
+  msgEmail: string
+  msgSenha: string
+
+  constructor(
+    public authService: AuthService,
+    private router: Router,
+    private alerta: AlertasService
+  ) { }
+
+  ngOnInit() {
+  }
+
+  //Funções de limpar mensagens de alerta ao clicar no input
+  limpaErroEmail() {
+    this.msgEmail &#x3D; &quot;hidden&quot;
+  }
+  limpaErroSenha() {
+    this.msgSenha &#x3D; &quot;hidden&quot;
+  }
+
+  //Funções para validar os dados inseridos pelo usuário
+  validaEmail() {
+    if (this.userLogin.email !&#x3D; undefined &amp;&amp; this.userLogin.email.includes(&quot;@&quot;) &amp;&amp; this.userLogin.email.includes(&quot;.&quot;)) {
+      return this.msgEmail &#x3D; &quot;hidden&quot;
+    }
+    return this.msgEmail &#x3D; &quot;visible&quot;
+  }
+
+  validaSenha() {
+    if (this.userLogin.senha !&#x3D; undefined &amp;&amp; this.userLogin.senha.length &gt;&#x3D; 6) {
+      return this.msgSenha &#x3D; &quot;hidden&quot;
+    }
+    return this.msgSenha &#x3D; &quot;visible&quot;
+  }
+
+ //Função de logar
+  logar() {
+    this.authService.entrar(this.userLogin).subscribe((resp: UserLogin) &#x3D;&gt; {
+      this.userLogin &#x3D; resp
+      environment.token &#x3D; this.userLogin.token
+      environment.nome &#x3D; this.userLogin.nome
+      environment.id &#x3D; this.userLogin.id
+      environment.tipo &#x3D; this.userLogin.tipo
+      this.router.navigate([&#x27;/home&#x27;])
+    }, erro &#x3D;&gt; {
+      //Quando os dados inseridos não condizem com o que está cadastrado no banco de dados
+      if (erro.status &#x3D;&#x3D; 500) {
+        this.alerta.showAlertDanger(&#x27;Email ou senha estão incorretos!&#x27;)
+      }
+    })
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-fluid p-0 d-flex align-items-center justify-content-end &quot;&gt;
+    &lt;!--região com fundo claro--&gt;
+    &lt;div class&#x3D;&quot;box-form&quot;&gt;
+        &lt;div class&#x3D;&quot;row d-flex align-items-center  m-0&quot;&gt;
+            &lt;!--Imagem lateral--&gt;
+            &lt;div class&#x3D;&quot;col-md-6 d-flex div-img-login px-0&quot;&gt;
+                &lt;img src&#x3D;&quot;../../assets/img/Together-bro.svg&quot; class&#x3D;&quot;img-login&quot; alt&#x3D;&quot;ilustração de grupo de pessoas&quot;&gt;
+            &lt;/div&gt;
+            &lt;!--Área dos inputs--&gt;
+            &lt;div class&#x3D;&quot;col-md-9 conteudo-input&quot;&gt;
+                &lt;h1 class&#x3D;&quot;text-left mb-3 mt-3&quot;&gt;Logar&lt;/h1&gt;
+
+                &lt;!--Div do input de email--&gt;
+                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                    &lt;input [(ngModel)]&#x3D;&#x27;userLogin.email&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;E-mail&quot; (focusout)&#x3D;&#x27;validaEmail()&#x27; (click)&#x3D;&#x27;limpaErroEmail()&#x27;&gt;
+                    &lt;small id&#x3D;&quot;valida-email&quot; [style.visibility]&#x3D;&quot;msgEmail&quot;&gt; &lt;img src&#x3D;&quot;../../assets/img/alertSign.svg&quot;
+                            height&#x3D;&quot;15px&quot; class&#x3D;&quot;pb-1&quot; alt&#x3D;&quot;alerta&quot;&gt; Deve conter um e-mail válido&lt;/small&gt;
+                &lt;/div&gt;
+
+                &lt;!--Div do input de senha--&gt;
+                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                    &lt;input [(ngModel)]&#x3D;&#x27;userLogin.senha&#x27; class&#x3D;&quot;form-control&quot; type&#x3D;&quot;password&quot; id&#x3D;&quot;senhaLogin&quot; placeholder&#x3D;&quot;Senha&quot; (focusout)&#x3D;&#x27;validaSenha()&#x27; (click)&#x3D;&#x27;limpaErroSenha()&#x27;&gt;
+                    &lt;small id&#x3D;&quot;valida-senha&quot; [style.visibility]&#x3D;&quot;msgSenha&quot;&gt; &lt;img src&#x3D;&quot;../../assets/img/alertSign.svg&quot;
+                            height&#x3D;&quot;15px&quot; class&#x3D;&quot;pb-1&quot; alt&#x3D;&quot;alerta&quot;&gt; A senha deve conter no mínimo 6 caracteres&lt;/small&gt;
+                &lt;/div&gt;
+
+                &lt;!--Div do botão de Entrar--&gt;
+                &lt;div class&#x3D;&quot;d-flex justify-content-left&quot;&gt;
+                    &lt;button type&#x3D;&quot;submit&quot; id&#x3D;&quot;botaoCadastrar&quot; class&#x3D;&quot;btn btn-danger mr-3 &quot; routerLink&#x3D;&#x27;/home&#x27;&gt;Cancelar&lt;/button&gt;
+                    &lt;button type&#x3D;&quot;submit&quot; id&#x3D;&quot;botaoCadastrar&quot; class&#x3D;&quot;btn btn-verdenutri  &quot; (click)&#x3D;&#x27;logar()&#x27;&gt;Entrar&lt;/button&gt;
+                &lt;/div&gt;
+
+                &lt;hr class&#x3D;&quot;mb-3 mt-4&quot;&gt;
+                &lt;!--Div do botão de Criar Conta--&gt;
+                &lt;label class&#x3D;&quot;titulo-criar-conta&quot;&gt;Não tem uma conta? Cadastre-se!&lt;/label&gt;
+                &lt;div class&#x3D;&quot;d-flex justify-content-left&quot;&gt;
+                    &lt;button type&#x3D;&quot;submit&quot; id&#x3D;&quot;botaoCadastrar&quot; class&#x3D;&quot;btn btn-verdenutri-line mt-1&quot; routerLink&#x3D;&#x27;/cadastro&#x27;&gt;Criar Conta&lt;/button&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./login.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/*Background*/
+
+.container-fluid {
+    background-color: var(--color-bg-login);
+    background-size: cover;
+}
+
+#bg-blue {
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+hr{
+    background-color: var(--color-hr);
+}
+
+
+/*Imagem Lateral*/
+
+.div-img-login {
+    position: absolute;
+    left: -400px;
+}
+
+.img-login {
+    margin-top: 20vh;
+}
+
+
+/*Formatações dos Input*/
+
+.conteudo-input {
+    padding-left: 20vw;
+    padding-right: auto;
+    padding-top: 20vh;
+}
+
+.box-form {
+    box-sizing: border-box;
+    width: 70vw;
+    height: 100vh;
+    background-color: var(--color-bg-branco);
+    position: relative;
+}
+
+label{
+    color: var(--color-font-titulo-login);
+}
+
+h1 {
+    font-weight: bold;
+    color: var(--color-font-titulo-login);
+}
+
+small {
+    color: var(--color-font-alertas-small);
+    visibility: hidden;
+}
+
+option {
+    border-radius: 30px;
+}
+
+input,
+select {
+    border-color: var(--color-border-input);
+    border-radius: 15px;
+    background-color: var(--color-bg-branco);
+    color: var(--color-font-black);
+}
+
+
+input:focus {
+    outline: none !important;
+    
+    color: var(--color-font-black);
+    border:1px solid var(--color-border-input);
+    box-shadow: 0 0 2px var(--color-border-input);
+}
+input::content{
+    background-color: var(--color-bg-branco)!important;
+    color: var(--color-font-black);
+}
+
+select:focus {
+    outline: none !important;
+    border:1px solid #17A697;
+    box-shadow: 0 0 10px #17A697;
+}
+
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px var(--color-bg-input-autocomplete) inset;
+}
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--color-font-black) !important;
+}
+input::placeholder{
+    color: var(--color-font-placeholder);
+}
+
+
+/*Botões*/
+
+.btn{
+    border-radius: 50px;
+}
+
+.btn-verdenutri {
+    background-color: #17A697;
+    color: #F3F3F3;
+    border-radius: 50px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.btn-verdenutri-line {
+    border-color: #17A697;
+    color: #17A697;
+    border-radius: 50px;
+    
+}
+
+.btn-verdenutri:hover {
+    background-color: var(--color-btn-verde-hover);
+}
+
+.btn-verdenutri-line:hover {
+    background-color: #17A697;
+    color: #F3F3F3;
+}
+
+@media only screen and (max-width:1200px) {
+    /*Imagem Lateral*/
+    .div-img-login {
+        position: absolute;
+        left: -200px;
+    }
+}
+
+@media only screen and (max-width:780px) {
+    /*Imagem Lateral*/
+    .div-img-login {
+        position: absolute;
+        left: 0;
+        bottom: -450px;
+        right: 0;
+        margin-left: 100;
+        margin-right: auto;
+        padding: 0px;
+        background-color: var(--color-bg-login);
+        z-index: -1;
+    }
+    .img-login {
+        margin-top: 0vh;
+    }
+    /*Formatações dos Input*/
+    .conteudo-input {
+        padding: 0px;
+        padding-right: 20px;
+        padding-left: 40px;
+    }
+    .box-form {
+        box-sizing: border-box;
+        width: 100vw;
+        background-color: var(--color-bg-branco);
+        border-radius: 0px;
+        position: relative;
+        padding: 0px;
+        margin: 0px;
+        z-index: 0;
+    }
+    .form-group {
+        z-index: 1;
+    }
+    .container-fluid {
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    /*Imagem Lateral*/
+    .div-caridade {
+        bottom: -200px;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    /*Imagem Lateral*/
+    .div-caridade {
+        bottom: -50px;
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid p-0 d-flex align-items-center justify-content-end ">    <!--região com fundo claro-->    <div class="box-form">        <div class="row d-flex align-items-center  m-0">            <!--Imagem lateral-->            <div class="col-md-6 d-flex div-img-login px-0">                <img src="../../assets/img/Together-bro.svg" class="img-login" alt="ilustração de grupo de pessoas">            </div>            <!--Área dos inputs-->            <div class="col-md-9 conteudo-input">                <h1 class="text-left mb-3 mt-3">Logar</h1>                <!--Div do input de email-->                <div class="form-group">                    <input [(ngModel)]=\'userLogin.email\' class="form-control" type="text" placeholder="E-mail" (focusout)=\'validaEmail()\' (click)=\'limpaErroEmail()\'>                    <small id="valida-email" [style.visibility]="msgEmail"> <img src="../../assets/img/alertSign.svg"                            height="15px" class="pb-1" alt="alerta"> Deve conter um e-mail válido</small>                </div>                <!--Div do input de senha-->                <div class="form-group">                    <input [(ngModel)]=\'userLogin.senha\' class="form-control" type="password" id="senhaLogin" placeholder="Senha" (focusout)=\'validaSenha()\' (click)=\'limpaErroSenha()\'>                    <small id="valida-senha" [style.visibility]="msgSenha"> <img src="../../assets/img/alertSign.svg"                            height="15px" class="pb-1" alt="alerta"> A senha deve conter no mínimo 6 caracteres</small>                </div>                <!--Div do botão de Entrar-->                <div class="d-flex justify-content-left">                    <button type="submit" id="botaoCadastrar" class="btn btn-danger mr-3 " routerLink=\'/home\'>Cancelar</button>                    <button type="submit" id="botaoCadastrar" class="btn btn-verdenutri  " (click)=\'logar()\'>Entrar</button>                </div>                <hr class="mb-3 mt-4">                <!--Div do botão de Criar Conta-->                <label class="titulo-criar-conta">Não tem uma conta? Cadastre-se!</label>                <div class="d-flex justify-content-left">                    <button type="submit" id="botaoCadastrar" class="btn btn-verdenutri-line mt-1" routerLink=\'/cadastro\'>Criar Conta</button>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastroComponent', 'selector': 'app-cadastro'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'ComoFuncionaComponent', 'selector': 'app-como-funciona'},{'name': 'DuvidasFrequentesComponent', 'selector': 'app-duvidas-frequentes'},{'name': 'EquipeComponent', 'selector': 'app-equipe'},{'name': 'FacaParteComponent', 'selector': 'app-faca-parte'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'OdsComponent', 'selector': 'app-ods'},{'name': 'OngsComponent', 'selector': 'app-ongs'},{'name': 'ProdutoDeleteComponent', 'selector': 'app-produto-delete'},{'name': 'ProdutoEditComponent', 'selector': 'app-produto-edit'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'RodapeComponent', 'selector': 'app-rodape'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoginComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
