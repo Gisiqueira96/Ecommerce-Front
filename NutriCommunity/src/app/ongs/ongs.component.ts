@@ -79,9 +79,4 @@ export class OngsComponent implements OnInit {
     })
   }
 
-  verificaLogin(){
-    if(environment.token == ''){
-      this.alertas.showAlertDanger("Por favor faça login.")
-    } 
-  }
 }

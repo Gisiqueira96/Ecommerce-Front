@@ -26,8 +26,8 @@ export class ProdutoDeleteComponent implements OnInit {
   ngOnInit() {
     window.scroll(0,0)
   if(environment.token == ''){
-    this.router.navigate(['/logar'])
     this.alerta.showAlertDanger('Faça login antes de acessar')
+    this.router.navigate(['/login'])
   }
     this.idProduto = this.route.snapshot.params['id']
     this.findByIdProduto(this.idProduto)

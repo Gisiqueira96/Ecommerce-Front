@@ -10,6 +10,10 @@
     max-height: 100vh;
 }
 
+hr{
+    background-color: var(--color-hr);
+}
+
 
 /*Imagem Lateral*/
 
@@ -37,6 +41,10 @@
     height: 100vh;
     background-color: var(--color-bg-branco);
     position: relative;
+}
+
+label{
+    color: var(--color-font-titulo-login);
 }
 
 h1 {

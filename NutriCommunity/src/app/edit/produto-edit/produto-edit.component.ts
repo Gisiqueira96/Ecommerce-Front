@@ -24,8 +24,8 @@ export class ProdutoEditComponent implements OnInit {
 
   ngOnInit() {
     if(environment.token == ''){
-      this.router.navigate(['/home'])
       this.alerta.showAlertDanger('Você deve fazer o login antes de entrar')
+      this.router.navigate(['/login'])
     }
   
     window.scroll(0,0)

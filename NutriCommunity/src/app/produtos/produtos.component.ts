@@ -45,9 +45,7 @@ export class ProdutosComponent implements OnInit {
     window.scroll(0, 0)
     this.idOng = this.route.snapshot.params['id']
     this.getOngById(this.idOng)
-    if (environment.token == '') {
-      this.router.navigate(['/home'])
-    }
+
   }
   getOngById(id: number) {
     this.ongService.getByIdOng(id).subscribe((resp: Categoria) => {
@@ -71,14 +69,18 @@ export class ProdutosComponent implements OnInit {
   }
 
   findByIdProduto(id: number) {
-    //Sempre que o usuário clicar no botão, o valor de data-dismiss será resetado
+    if(environment.token == ''){
+      this.alerta.showAlertDanger("Por favor faça login.")
+      this.router.navigate(["/login"])
+    }else{
+      //Sempre que o usuário clicar no botão, o valor de data-dismiss será resetado
     const botaoAdicionarCarrinho = document.getElementById("adicionaCarrinhoBotao")
     botaoAdicionarCarrinho?.removeAttribute("data-dismiss")
 
-    return this.produtosService.getByIdProduto(id).subscribe((resp) => {
+     this.produtosService.getByIdProduto(id).subscribe((resp) => {
       this.produto = resp
     })
-
+    }
   }
 
   limpaErroEstoque() {
@@ -119,8 +121,6 @@ export class ProdutosComponent implements OnInit {
     } else {
       this.msgEstoque = "visible"
     }
-
-
   }
 }
 
