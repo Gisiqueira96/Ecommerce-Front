@@ -74,7 +74,7 @@ export class OngsComponent implements OnInit {
 
   deleteOng(){
     this.ongsService.deleteOng(this.ong.id).subscribe(() => {
-      this.alertas.showAlertSuccess('Produto apagado com sucesso!')
+      this.alertas.showAlertSuccess('ONG apagada com sucesso!')
       this.getAllOng()
     })
   }
