@@ -69,11 +69,27 @@ a{
  .tipoFonte{
     font-size: 40px;
 
+    
+
+ }
+
+ @media only screen and (max-width:1316px) {
+    .bg-dividido-oposto {
+       
+        height: 1300px;
+    }
  }
  @media only screen and (max-width:1200px) {
     .bg-dividido-oposto {
        
         height: 1300px;
+    }
+ }
+
+ @media only screen and (max-width:875px) {
+    .bg-dividido-oposto {
+       
+        height: 1700px;
     }
  }
  @media only screen and (max-width:800px) {
@@ -82,3 +98,13 @@ a{
         height: 1800px;
     }
  }
+
+ @media only screen and (max-width:400px) {
+    .imgs-como-funciona{
+        height: 400px;
+        transition: 500ms;
+        position: relative;
+        width: 300px
+     }
+ }
+ 
