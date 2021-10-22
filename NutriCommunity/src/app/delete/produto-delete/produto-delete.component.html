@@ -14,18 +14,18 @@
     <div class="row mt-5 align-items-center bg-creme">
         <div class="col-md-3"></div>
         <div class="col-md-4 d-flex justify-content-center">
-                <img src="{{produto.foto}}" alt="foto do Produto" >   
+            <img src="{{produto.foto}}" alt="foto do Produto">
         </div>
-        
-        <div class="col-md-2 d-flex justify-content-start" >
+
+        <div class="col-md-2 d-flex justify-content-start">
             <div class="borda">
                 <h3>{{produto.nomeProduto}}</h3>
                 <p>{{produto.descricao}}</p>
                 <div>
-                  <button class="btn btn-info mr-4" [routerLink]="['/ongs/', produto.categoria.id]">Não</button>
-                  <button class="btn btn-verdenutri" (click)='apagar()'>Sim</button>
+                    <button class="btn btn-info mr-4" [routerLink]="['/ongs/', produto.categoria.id]">Não</button>
+                    <button class="btn btn-verdenutri" (click)='apagar()'>Sim</button>
                 </div>
-              </div>
+            </div>
         </div>
         <div class="col-md-3"></div>
     </div>
