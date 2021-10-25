@@ -3,9 +3,9 @@
         <div class="col-md-12">
             <div class="card-columns">
                 <div class="card card-size mt-5" *ngIf='authService.adm()'>
-                    <a  data-toggle="modal" data-target="#cadastroOng">
+                    <a data-toggle="modal" data-target="#cadastroOng">
                         <div>
-                            <img class="img-fluid card-img-top"  src="../../assets/img/imagem_adicionar.jpg"
+                            <img class="img-fluid card-img-top" src="../../assets/img/imagem_adicionar.jpg"
                                 alt="Imagem de capa do card">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Adicionar ONG</h5>
@@ -16,7 +16,8 @@
                 <div class="card mt-5" *ngFor='let item of listaOngs'>
                     <div class="card-body">
                         <a [routerLink]="['/ongs/', item.id]">
-                            <img class="card-img-top mb-4 img-size border-foto" src="{{item.foto}}" alt="Imagem de capa do card">
+                            <img class="card-img-top mb-4 img-size border-foto" src="{{item.foto}}"
+                                alt="Imagem de capa do card">
                             <h5 class="card-title text-center">{{item.nomeOng}}</h5>
                             <p class="card-text text-center">{{item.localAtuacao}}</p>
                         </a>
@@ -26,8 +27,8 @@
                                 (click)="findByIdOng(item.id)" class="mr-4 text-white btn bg-verdeProjeto ">
                                 Atualizar
                             </a>
-                            <a class="text-white btn bg-danger " *ngIf='authService.adm()' data-toggle="modal" data-target="#deleteOng"
-                                (click)="findByIdOng(item.id)">
+                            <a class="text-white btn bg-danger " *ngIf='authService.adm()' data-toggle="modal"
+                                data-target="#deleteOng" (click)="findByIdOng(item.id)">
                                 Deletar
                             </a>
                         </div>
@@ -80,7 +81,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn bg-verdeProjeto text-white" (click)='postOng()' data-dismiss="modal">Publicar</button>
+                <button type="button" class="btn bg-verdeProjeto text-white" (click)='postOng()'
+                    data-dismiss="modal">Publicar</button>
             </div>
         </div>
     </div>
@@ -126,7 +128,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn bg-verdeProjeto text-white" (click)='putOng()' data-dismiss="modal">Atualizar</button>
+                <button type="button" class="btn bg-verdeProjeto text-white" (click)='putOng()'
+                    data-dismiss="modal">Atualizar</button>
             </div>
         </div>
     </div>
@@ -139,7 +142,7 @@
         <div class="modal-content d-flex">
             <h4 class="modal-title tipoFonte mt-3 ml-3">Apagar ONG</h4>
             <div class="modal-header">
-                
+
                 <div class="modal-footer">
                     <label for="titulo">Você deseja mesmo apagar a ong {{ong.nomeOng}}? Todos os produtos relacionados
                         serão igualmente apagados. </label>
