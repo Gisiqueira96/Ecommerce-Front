@@ -23,16 +23,20 @@
                 <a class="nav-link txt-azulescuro" href="#equipe">EQUIPE</a>
                 <hr>
             </li>
-            <li class="nav-item  p-0" *ngIf="inicial()">
+            <!--
+                <li class="nav-item  p-0" *ngIf="inicial()">
                 <a class="nav-link txt-azulescuro" routerLink=''>DEPOIMENTOS</a>
                 <hr>
-            </li>
-            <li class="nav-item m-0 p-0">
+            </li> 
+            -->
+
+            <li class="nav-item m-0 p-0" *ngIf="home()">
                 <a class="nav-link txt-azulescuro" routerLink='/home'>HOME <span class="sr-only">(página
                         atual)</span></a>
                 <hr>
             </li>
-            <li class="nav-item  p-0">
+
+            <li class="nav-item  p-0" *ngIf="ong()">
                 <a class="nav-link txt-azulescuro" routerLink='/ongs'>ONG's</a>
                 <hr>
             </li>

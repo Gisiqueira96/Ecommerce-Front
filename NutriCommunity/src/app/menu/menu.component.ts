@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { AuthService } from '../service/auth.service';
+import { OngsService } from '../service/ongs.service';
 
 @Component({
   selector: 'app-menu',
@@ -15,7 +16,8 @@ export class MenuComponent implements OnInit {
 
   constructor(
     public authService: AuthService,
-    private router: Router
+    private router: Router,
+    private ongsService: OngsService
   ) { }
 
   ngOnInit(
@@ -35,6 +37,24 @@ export class MenuComponent implements OnInit {
     }
     else {
       return this.homepage = false;
+    }
+  }
+  home() {
+
+    if (this.router.url == "/home") {
+      return this.homepage = false;
+    }
+    else {
+      return this.homepage = true;
+    }
+  }
+  ong() {
+
+    if (this.router.url == "/ongs") {
+      return this.homepage = false;
+    }
+    else {
+      return this.homepage = true;
     }
   }
 
