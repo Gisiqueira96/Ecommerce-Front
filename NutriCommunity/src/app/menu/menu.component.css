@@ -83,6 +83,21 @@ li:hover{
         background:linear-gradient(-90deg, #dbb48400 0%,var(--color-bg-creme-escuro) 50%,#dbb48400 100% ); 
     }
  }
+/* Botão para subir o scroll */
+ #btn-scroll{
+  width:80px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  scroll-behavior: smooth;
+  transition: all 0.5s;
+}
+
+#btn-scroll:hover{
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
 
 
  @media only screen and (max-width:350px) {
@@ -132,3 +147,5 @@ li:hover{
   input:checked + .slider:before {
     transform: translateX(26px);
   }
+
+  

@@ -73,4 +73,5 @@ export class MenuComponent implements OnInit {
     const mode = document.querySelector('html')
     mode?.classList.toggle('dark-mode')
   }
+
 }
