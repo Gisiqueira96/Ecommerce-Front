@@ -9,9 +9,11 @@ color:var(--color-font-titulo-delete-edit);
     color: var(--color-font-titulo-equipe);
     font-weight: bold;
 }
-
+p{
+    color:var(--color-font-black)
+}
 .bg-creme{
-    background: linear-gradient(90deg, #ffebd300 30%, #FFEBD3 30%, #ffebd3 80%, #ffebd300 80%);
+    background: linear-gradient(90deg, #ffebd300 30%, var(--color-menu) 30%, var(--color-menu)  80%, #ffebd300 80%);
     border-radius: 20px;
 }
 

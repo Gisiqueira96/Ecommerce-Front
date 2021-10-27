@@ -45,3 +45,11 @@ label{
     color: var(--color-font-black)
 }
 
+.btn-verdenutri {
+    background-color: var(--color-btn-verde);
+    color: #F3F3F3;
+}
+
+.btn-verdenutri:hover {
+    background-color: var(--color-btn-verde-hover);
+}
