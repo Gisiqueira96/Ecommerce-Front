@@ -73,5 +73,13 @@ export class MenuComponent implements OnInit {
     const mode = document.querySelector('html')
     mode?.classList.toggle('dark-mode')
   }
+  subir(){
+    if(this.router.url != "/home"){
+      return false
+    }
+    else{
+      return true
+    }
+  }
 
 }
