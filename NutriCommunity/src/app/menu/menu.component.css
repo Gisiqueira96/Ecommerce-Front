@@ -85,7 +85,7 @@ li:hover{
  }
 /* Botão para subir o scroll */
  #btn-scroll{
-  width:80px;
+  width:60px;
   position: fixed;
   bottom: 20px;
   right: 20px;
